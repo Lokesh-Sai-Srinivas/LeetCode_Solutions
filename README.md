@@ -1,4 +1,4 @@
-```markdown
+
 # 🌱 My LeetCode Growth Journey
 
 Welcome to my little coding garden 🌿 — a place where I plant one LeetCode problem a day, water it with code 💻, and watch my skills grow over time. 🌸
@@ -78,12 +78,6 @@ This way I always know what’s what at a glance 👀
 - 🏷️ Tag each solution with **difficulty** (Easy/Medium/Hard)
 - 🤖 Automate progress updates in this README
 - ✨ Keep this repo fun, friendly, and inspiring
-
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](./LICENSE) — feel free to fork, use, or contribute 🌟
 
 ---
 
