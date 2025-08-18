@@ -95,6 +95,7 @@ Let’s keep coding and keep growing! 🌱💻
 
 | # | Title | C++ ⚡ | Java ☕ | Python 🐍 |
 |---|-------|---|---|---|
+| 1 | Two Sum | ✅ | ✅ | ✅ |
 | 326 | Power of Three | ✅ | ✅ | ✅ |
 | 342 | Power of Four | ✅ | ✅ | ✅ |
 | 679 | 24 Game | ✅ | ✅ | ✅ |
