@@ -152,7 +152,6 @@ def update_progress_table(solved):
     with open(README, "w", encoding="utf-8") as f:
         f.write(readme)
 
-
 # -------- Main --------
 if __name__ == "__main__":
     copy_daily_solutions()
