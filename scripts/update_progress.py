@@ -1,4 +1,5 @@
 import os
+import re
 from collections import defaultdict
 
 # Root folders where language solutions are stored
@@ -27,12 +28,15 @@ def get_solved_problems():
 
     for lang in LANG_FOLDERS:
         if not os.path.exists(lang):
-            continue  # skip missing folders for now
+            continue
 
         for file in os.listdir(lang):
             if file.endswith((".py", ".cpp", ".java", ".go", ".js", ".cs", ".rb", ".swift", ".kt", ".ts", ".rs", ".scala", ".php")):
-                problem = os.path.splitext(file)[0]  # filename without extension
-                solved[problem].add(lang)
+                # Extract problem number from filename (e.g., 0001 from 0001-two-sum.py)
+                match = re.match(r"^(\d+)", file)
+                if match:
+                    problem_id = match.group(1)
+                    solved[problem_id].add(lang)
 
     return solved
 
