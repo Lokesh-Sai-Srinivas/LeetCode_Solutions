@@ -46,8 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md PROGRESS.md \
-            python/ cpp/ java/ golang/ rust/ javascript/ typescript/ kotlin/ swift/ csharp/ ruby/ php/ scala/
+          git add .
           git commit -m "📊 auto: update progress table" || echo "No changes to commit"
           git push
         env:
