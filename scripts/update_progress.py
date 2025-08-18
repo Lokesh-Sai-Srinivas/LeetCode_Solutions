@@ -13,7 +13,7 @@ LANG_DIRS = {
 README = os.path.join(BASE_DIR, "README.md")
 PROGRESS = os.path.join(BASE_DIR, "PROGRESS.md")
 
-# File naming styles
+# -------- Filename Styles --------
 def get_filename(problem_id, title, lang):
     title_clean = re.sub(r'[^a-zA-Z0-9]+', ' ', title).strip().lower()
     words = title_clean.split()
@@ -27,18 +27,20 @@ def get_filename(problem_id, title, lang):
         return f"{problem_id}_{camel}.java"
     return None
 
-# Extract header info from solution file
+# -------- Parse Problem Header --------
 def parse_header(file_path):
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read(500)  # only read beginning
-    match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content)
-    if match:
-        return match.group(1).zfill(4), match.group(2).strip()
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read(500)  # only need the header
+        match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content)
+        if match:
+            return match.group(1).zfill(4), match.group(2).strip()
+    except Exception:
+        pass
     return None, None
 
-# Copy solutions to respective language dirs
+# -------- Step 1: Copy from daily-challenge → language folders --------
 def copy_daily_solutions():
-    solved = {}
     for day in os.listdir(DAILY_DIR):
         day_path = os.path.join(DAILY_DIR, day)
         if not os.path.isdir(day_path):
@@ -56,22 +58,35 @@ def copy_daily_solutions():
             target_name = get_filename(problem_id, title, ext)
             target_path = os.path.join(LANG_DIRS[ext], target_name)
 
-            # Copy if not already present
+            # Copy only if missing
             if not os.path.exists(target_path):
                 shutil.copyfile(os.path.join(day_path, file), target_path)
 
-            # Track solved
-            solved.setdefault(problem_id, {"title": title, "py": "❌", "cpp": "❌", "java": "❌"})
-            solved[problem_id][ext] = "✅"
+# -------- Step 2: Build progress from language folders --------
+def build_progress():
+    solved = {}
+
+    for lang, folder in LANG_DIRS.items():
+        if not os.path.exists(folder):
+            continue
+
+        for file in os.listdir(folder):
+            file_path = os.path.join(folder, file)
+            problem_id, title = parse_header(file_path)
+            if not problem_id:
+                continue
+
+            if problem_id not in solved:
+                solved[problem_id] = {"title": title, "py": "❌", "cpp": "❌", "java": "❌"}
+            solved[problem_id][lang] = "✅"
 
     return solved
 
-# Update README.md & PROGRESS.md tables
+# -------- Step 3: Update Markdown --------
 def update_progress_table(solved):
-    # Build markdown table
     header = "| # | Title | C++ ⚡ | Java ☕ | Python 🐍 |\n|---|-------|---|---|---|\n"
     rows = []
-    for pid in sorted(solved.keys()):
+    for pid in sorted(solved.keys(), key=lambda x: int(x)):
         row = f"| {int(pid)} | {solved[pid]['title']} | {solved[pid]['cpp']} | {solved[pid]['java']} | {solved[pid]['py']} |"
         rows.append(row)
     table = header + "\n".join(rows)
@@ -80,7 +95,7 @@ def update_progress_table(solved):
     with open(PROGRESS, "w", encoding="utf-8") as f:
         f.write("# 📊 LeetCode Progress Tracker\n\n" + table + "\n")
 
-    # Update README.md (replace snapshot section)
+    # Update README.md (replace snapshot section if exists)
     with open(README, "r", encoding="utf-8") as f:
         readme = f.read()
 
@@ -92,6 +107,8 @@ def update_progress_table(solved):
     with open(README, "w", encoding="utf-8") as f:
         f.write(readme)
 
+# -------- Main --------
 if __name__ == "__main__":
-    solved = copy_daily_solutions()
+    copy_daily_solutions()
+    solved = build_progress()
     update_progress_table(solved)
