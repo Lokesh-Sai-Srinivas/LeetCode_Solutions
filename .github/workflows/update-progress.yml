@@ -4,21 +4,39 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:   # allows manual runs too
+    paths:
+      - "daily-challenge/**"
+      - "scripts/update_progress.py"
+      - "python/**"
+      - "cpp/**"
+      - "java/**"
+      - "golang/**"
+      - "rust/**"
+      - "javascript/**"
+      - "typescript/**"
+      - "kotlin/**"
+      - "swift/**"
+      - "csharp/**"
+      - "ruby/**"
+      - "php/**"
+      - "scala/**"
+      - "README.md"
+      - "PROGRESS.md"
+  workflow_dispatch: # allows manual runs
 
 jobs:
   update-progress:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Run Progress Script
         run: |
@@ -28,8 +46,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md PROGRESS.md python/ cpp/ java/
-          git commit -m "auto: update progress table" || echo "No changes to commit"
+          git add README.md PROGRESS.md \
+            python/ cpp/ java/ golang/ rust/ javascript/ typescript/ kotlin/ swift/ csharp/ ruby/ php/ scala/
+          git commit -m "📊 auto: update progress table" || echo "No changes to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
