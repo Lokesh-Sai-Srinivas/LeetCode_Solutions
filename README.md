@@ -57,40 +57,6 @@ Every solution is a tiny step, but together they form a giant leap 🚀
 
 ## 📊 Problem Progress Tracker
 
-
----
-
-## 📝 Commit Messages
-
-I like to keep things clean, so my commit messages follow this style:
-
-```
-
-\[Daily] YYYY-MM-DD: Problem Name
-\[Python] #0001: Two Sum
-\[Java]   #0001: Two Sum
-\[Cpp]    #0001: Two Sum
-
-```
-
-This way I always know what’s what at a glance 👀
-
----
-
-
-
-## 🌟 My Goals
-
-- 🌍 Add more languages (Go, Rust, JavaScript... who knows?)
-- 🏷️ Tag each solution with **difficulty** (Easy/Medium/Hard)
-- 🤖 Automate progress updates in this README
-- ✨ Keep this repo fun, friendly, and inspiring
-
----
-
-## 💡 A Note to Myself (and maybe you 👋)
-
-> "Consistency beats intensity. One problem a day might look small now, but in a year — it’s 365 problems solved." 🌟
-
-Let’s keep coding and keep growing! 🌱💻
-```
+| # | Title | cpp | java | python |
+|---|-------|--------|--------|--------|
+| 1 | Two Sum | ✅ | ✅ | ✅ |
