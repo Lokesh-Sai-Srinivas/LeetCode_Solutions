@@ -13,15 +13,11 @@ DAILY_DIR = "daily-challenge"
 PROGRESS_FILE = "PROGRESS.md"
 README_FILE = "README.md"
 
-# Regex to match files like "0679_24-game.py"
-FILENAME_PATTERN = re.compile(r"^(\d+)[-_](.+)\.(py|java|cpp)$")
-
-def slugify(name: str) -> str:
-    """Convert problem name to a filesystem-friendly slug."""
-    return name.lower().replace(" ", "-").replace("_", "-")
+# Regex to match files like "0001_two_sum.py" or "0642-design-search-autocomplete-system.cpp"
+FILENAME_PATTERN = re.compile(r"^(\d+)[-_](.+)\.(py|java|cpp)$", re.IGNORECASE)
 
 def process_daily_challenges():
-    """Copy daily challenge solutions into respective language folders with correct naming."""
+    """Copy daily challenge solutions into respective language folders with same naming convention."""
     for day in os.listdir(DAILY_DIR):
         day_path = os.path.join(DAILY_DIR, day)
         if not os.path.isdir(day_path):
@@ -41,21 +37,20 @@ def process_daily_challenges():
             if not lang:
                 continue
 
-            # Extract problem number + title from folder name
-            # Expected format: "0679_24-game" or "0679-24-game"
-            match = re.match(r"(\d+)[-_](.+)", day)
+            match = FILENAME_PATTERN.match(file)
             if not match:
+                # Skip if filename does not match required pattern
                 continue
 
-            prob_num, prob_title = match.groups()
-            slug = slugify(prob_title)
-            new_filename = f"{int(prob_num):04d}_{slug}{ext}"
+            prob_num, prob_title, _ = match.groups()
+            # Keep same naming convention as user provided
+            new_filename = file  
 
             dest_dir = os.path.join(lang)
             os.makedirs(dest_dir, exist_ok=True)
             dest_path = os.path.join(dest_dir, new_filename)
 
-            # Copy file to language folder
+            # Copy file to language folder (overwrite if updated)
             shutil.copyfile(filepath, dest_path)
 
 def collect_progress():
