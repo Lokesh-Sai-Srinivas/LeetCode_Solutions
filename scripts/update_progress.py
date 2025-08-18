@@ -1,121 +1,130 @@
 import os
-import shutil
 import re
+import shutil
+from collections import defaultdict
 
-# -------------------------
-# 1. Helpers
-# -------------------------
-def ensure_folder(folder):
-    if not os.path.exists(folder):
-        os.makedirs(folder)
+# ---- Config ----
+LANGUAGES = {
+    "cpp": { "ext": ".cpp", "display": "C++ ⚡" },
+    "java": { "ext": ".java", "display": "Java ☕" },
+    "python": { "ext": ".py", "display": "Python 🐍" },
+}
+DAILY_DIR = "daily-challenge"
+PROGRESS_FILE = "PROGRESS.md"
+README_FILE = "README.md"
 
-def normalize_filename(fname):
-    """Standardize filename: 0679-24-game.py -> 0679_24_game.py"""
-    base, ext = os.path.splitext(fname)
-    return base.replace("-", "_") + ext
+# Regex to match files like "0679_24-game.py"
+FILENAME_PATTERN = re.compile(r"^(\d+)[-_](.+)\.(py|java|cpp)$")
 
-def extract_problem_info(fname):
-    """
-    Extract problem number + title from filename.
-    Example: 0679_24_game.py -> ("0679", "24 Game")
-    """
-    base, _ = os.path.splitext(fname)
-    parts = base.split("_", 1)
-    if len(parts) == 2 and parts[0].isdigit():
-        num, raw_title = parts
-        title = raw_title.replace("_", " ").title()
-        return num, title
-    return None, None
+def slugify(name: str) -> str:
+    """Convert problem name to a filesystem-friendly slug."""
+    return name.lower().replace(" ", "-").replace("_", "-")
 
-def detect_languages():
-    """Detect all language folders dynamically."""
-    lang_map = {}
-    for folder in os.listdir("."):
-        if os.path.isdir(folder) and folder not in ["daily-challenge", ".github", "scripts"]:
-            for fname in os.listdir(folder):
-                _, ext = os.path.splitext(fname)
-                if ext:
-                    lang_map[folder] = ext
-    return lang_map
+def process_daily_challenges():
+    """Copy daily challenge solutions into respective language folders with correct naming."""
+    for day in os.listdir(DAILY_DIR):
+        day_path = os.path.join(DAILY_DIR, day)
+        if not os.path.isdir(day_path):
+            continue
 
-def copy_from_daily(problem_num, ext, lang):
-    """Copy solution from daily-challenge → lang folder if missing"""
-    daily_folder = "daily-challenge/"
-    if not os.path.exists(daily_folder):
-        return False
+        for file in os.listdir(day_path):
+            filepath = os.path.join(day_path, file)
+            if not os.path.isfile(filepath):
+                continue
 
-    for date in os.listdir(daily_folder):
-        path = os.path.join(daily_folder, date)
-        if os.path.isdir(path):
-            for fname in os.listdir(path):
-                if fname.startswith(problem_num) and fname.endswith(ext):
-                    ensure_folder(lang)
-                    new_name = normalize_filename(fname)
-                    shutil.copy(os.path.join(path, fname), os.path.join(lang, new_name))
-                    return True
-    return False
+            name, ext = os.path.splitext(file)
+            lang = None
+            for l, data in LANGUAGES.items():
+                if data["ext"] == ext:
+                    lang = l
+                    break
+            if not lang:
+                continue
 
-# -------------------------
-# 2. Build Problem List
-# -------------------------
-problems = {}  # { "0001": "Two Sum", "0679": "24 Game", ... }
+            # Extract problem number + title from folder name
+            # Expected format: "0679_24-game" or "0679-24-game"
+            match = re.match(r"(\d+)[-_](.+)", day)
+            if not match:
+                continue
 
-# Scan language folders
-for folder in os.listdir("."):
-    if os.path.isdir(folder) and folder not in ["daily-challenge", ".github", "scripts"]:
-        for fname in os.listdir(folder):
-            num, title = extract_problem_info(fname)
-            if num and title:
-                problems[num] = title
+            prob_num, prob_title = match.groups()
+            slug = slugify(prob_title)
+            new_filename = f"{int(prob_num):04d}_{slug}{ext}"
 
-# Scan daily-challenge
-if os.path.exists("daily-challenge"):
-    for date in os.listdir("daily-challenge"):
-        path = os.path.join("daily-challenge", date)
-        if os.path.isdir(path):
-            for fname in os.listdir(path):
-                num, title = extract_problem_info(fname)
-                if num and title:
-                    problems[num] = title
+            dest_dir = os.path.join(lang)
+            os.makedirs(dest_dir, exist_ok=True)
+            dest_path = os.path.join(dest_dir, new_filename)
 
-# -------------------------
-# 3. Build Progress Table
-# -------------------------
-languages = detect_languages()
-header = "| # | Title | " + " | ".join(languages.keys()) + " |"
-divider = "|---|-------|" + "|".join(["--------" for _ in languages]) + "|"
+            # Copy file to language folder
+            shutil.copyfile(filepath, dest_path)
 
-progress_table = header + "\n" + divider + "\n"
+def collect_progress():
+    """Scan language folders and build a progress table."""
+    problems = defaultdict(dict)
 
-for num in sorted(problems.keys(), key=lambda x: int(x)):
-    title = problems[num]
-    row = f"| {int(num)} | {title} |"
+    for lang, data in LANGUAGES.items():
+        folder = lang
+        if not os.path.exists(folder):
+            continue
+        for file in os.listdir(folder):
+            match = FILENAME_PATTERN.match(file)
+            if not match:
+                continue
+            prob_num, title, ext = match.groups()
+            title = title.replace("-", " ").replace("_", " ").title()
+            problems[prob_num]["title"] = title
+            problems[prob_num][lang] = "✅"
 
-    for lang, ext in languages.items():
-        folder = f"{lang}/"
-        solved = False
+    return problems
 
-        if os.path.exists(folder):
-            solved = any(fname.startswith(num) and fname.endswith(ext) for fname in os.listdir(folder))
+def update_progress_md(problems):
+    """Write PROGRESS.md with a full table."""
+    langs = list(LANGUAGES.keys())
 
-        if not solved:
-            solved = copy_from_daily(num, ext, lang)
+    lines = []
+    lines.append("# 📊 LeetCode Progress Tracker\n")
+    lines.append("| # | Title | " + " | ".join(LANGUAGES[l]["display"] for l in langs) + " |")
+    lines.append("|---|-------|" + "|".join("---" for _ in langs) + "|")
 
-        row += " ✅ |" if solved else " ⬜ |"
+    for num in sorted(problems, key=lambda x: int(x)):
+        p = problems[num]
+        row = f"| {int(num)} | {p['title']} | " + " | ".join(p.get(lang, "❌") for lang in langs) + " |"
+        lines.append(row)
 
-    progress_table += row + "\n"
+    with open(PROGRESS_FILE, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
 
-# -------------------------
-# 4. Update README.md
-# -------------------------
-with open("README.md", "r", encoding="utf-8") as f:
-    content = f.read()
+def update_readme(problems):
+    """Update README with snapshot + link to PROGRESS.md."""
+    total = len(problems)
+    langs = list(LANGUAGES.values())
 
-start_marker = "## 📊 Problem Progress Tracker"
-if start_marker in content:
-    content = content.split(start_marker)[0] + start_marker + "\n\n" + progress_table
-else:
-    content += "\n\n" + start_marker + "\n\n" + progress_table
+    snapshot = f"""
+## 📊 Progress Snapshot
 
-with open("README.md", "w", encoding="utf-8") as f:
-    f.write(content)
+- Problems Solved: **{total}**
+- Languages: { " | ".join(l["display"] for l in langs) }
+- Daily Challenge: ✅ Ongoing
+
+👉 [View Full Progress](./{PROGRESS_FILE})
+"""
+
+    with open(README_FILE, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Replace old snapshot (if exists)
+    new_content = re.sub(r"## 📊 Progress Snapshot[\s\S]*?(👉 \[View Full Progress\]\(.*\))",
+                         snapshot.strip(), content, flags=re.MULTILINE)
+
+    if new_content == content:  # no snapshot before, just append
+        new_content += "\n\n" + snapshot
+
+    with open(README_FILE, "w", encoding="utf-8") as f:
+        f.write(new_content)
+
+
+if __name__ == "__main__":
+    process_daily_challenges()
+    problems = collect_progress()
+    update_progress_md(problems)
+    update_readme(problems)
