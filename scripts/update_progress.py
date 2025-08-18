@@ -1,125 +1,97 @@
 import os
 import re
 import shutil
-from collections import defaultdict
 
-# ---- Config ----
-LANGUAGES = {
-    "cpp": { "ext": ".cpp", "display": "C++ ⚡" },
-    "java": { "ext": ".java", "display": "Java ☕" },
-    "python": { "ext": ".py", "display": "Python 🐍" },
+# Paths
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+DAILY_DIR = os.path.join(BASE_DIR, "daily-challenge")
+LANG_DIRS = {
+    "py": os.path.join(BASE_DIR, "python"),
+    "cpp": os.path.join(BASE_DIR, "cpp"),
+    "java": os.path.join(BASE_DIR, "java"),
 }
-DAILY_DIR = "daily-challenge"
-PROGRESS_FILE = "PROGRESS.md"
-README_FILE = "README.md"
+README = os.path.join(BASE_DIR, "README.md")
+PROGRESS = os.path.join(BASE_DIR, "PROGRESS.md")
 
-# Regex to match files like "0001_two_sum.py" or "0642-design-search-autocomplete-system.cpp"
-FILENAME_PATTERN = re.compile(r"^(\d+)[-_](.+)\.(py|java|cpp)$", re.IGNORECASE)
+# File naming styles
+def get_filename(problem_id, title, lang):
+    title_clean = re.sub(r'[^a-zA-Z0-9]+', ' ', title).strip().lower()
+    words = title_clean.split()
 
-def process_daily_challenges():
-    """Copy daily challenge solutions into respective language folders with same naming convention."""
+    if lang == "py":
+        return f"{problem_id}_{'_'.join(words)}.py"
+    elif lang == "cpp":
+        return f"{problem_id}-{'-'.join(words)}.cpp"
+    elif lang == "java":
+        camel = "".join(w.capitalize() for w in words)
+        return f"{problem_id}_{camel}.java"
+    return None
+
+# Extract header info from solution file
+def parse_header(file_path):
+    with open(file_path, "r", encoding="utf-8") as f:
+        content = f.read(500)  # only read beginning
+    match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content)
+    if match:
+        return match.group(1).zfill(4), match.group(2).strip()
+    return None, None
+
+# Copy solutions to respective language dirs
+def copy_daily_solutions():
+    solved = {}
     for day in os.listdir(DAILY_DIR):
         day_path = os.path.join(DAILY_DIR, day)
         if not os.path.isdir(day_path):
             continue
 
         for file in os.listdir(day_path):
-            filepath = os.path.join(day_path, file)
-            if not os.path.isfile(filepath):
+            ext = file.split(".")[-1]
+            if ext not in LANG_DIRS:
                 continue
 
-            name, ext = os.path.splitext(file)
-            lang = None
-            for l, data in LANGUAGES.items():
-                if data["ext"] == ext:
-                    lang = l
-                    break
-            if not lang:
+            problem_id, title = parse_header(os.path.join(day_path, file))
+            if not problem_id:
                 continue
 
-            match = FILENAME_PATTERN.match(file)
-            if not match:
-                # Skip if filename does not match required pattern
-                continue
+            target_name = get_filename(problem_id, title, ext)
+            target_path = os.path.join(LANG_DIRS[ext], target_name)
 
-            prob_num, prob_title, _ = match.groups()
-            # Keep same naming convention as user provided
-            new_filename = file  
+            # Copy if not already present
+            if not os.path.exists(target_path):
+                shutil.copyfile(os.path.join(day_path, file), target_path)
 
-            dest_dir = os.path.join(lang)
-            os.makedirs(dest_dir, exist_ok=True)
-            dest_path = os.path.join(dest_dir, new_filename)
+            # Track solved
+            solved.setdefault(problem_id, {"title": title, "py": "❌", "cpp": "❌", "java": "❌"})
+            solved[problem_id][ext] = "✅"
 
-            # Copy file to language folder (overwrite if updated)
-            shutil.copyfile(filepath, dest_path)
+    return solved
 
-def collect_progress():
-    """Scan language folders and build a progress table."""
-    problems = defaultdict(dict)
+# Update README.md & PROGRESS.md tables
+def update_progress_table(solved):
+    # Build markdown table
+    header = "| # | Title | C++ ⚡ | Java ☕ | Python 🐍 |\n|---|-------|---|---|---|\n"
+    rows = []
+    for pid in sorted(solved.keys()):
+        row = f"| {int(pid)} | {solved[pid]['title']} | {solved[pid]['cpp']} | {solved[pid]['java']} | {solved[pid]['py']} |"
+        rows.append(row)
+    table = header + "\n".join(rows)
 
-    for lang, data in LANGUAGES.items():
-        folder = lang
-        if not os.path.exists(folder):
-            continue
-        for file in os.listdir(folder):
-            match = FILENAME_PATTERN.match(file)
-            if not match:
-                continue
-            prob_num, title, ext = match.groups()
-            title = title.replace("-", " ").replace("_", " ").title()
-            problems[prob_num]["title"] = title
-            problems[prob_num][lang] = "✅"
+    # Update PROGRESS.md fully
+    with open(PROGRESS, "w", encoding="utf-8") as f:
+        f.write("# 📊 LeetCode Progress Tracker\n\n" + table + "\n")
 
-    return problems
+    # Update README.md (replace snapshot section)
+    with open(README, "r", encoding="utf-8") as f:
+        readme = f.read()
 
-def update_progress_md(problems):
-    """Write PROGRESS.md with a full table."""
-    langs = list(LANGUAGES.keys())
+    if "📊 Progress Snapshot" in readme:
+        before = readme.split("📊 Progress Snapshot")[0]
+        after = "\n👉 View Full Progress\n"
+        readme = before + "📊 Progress Snapshot\n\n" + table + after
 
-    lines = []
-    lines.append("# 📊 LeetCode Progress Tracker\n")
-    lines.append("| # | Title | " + " | ".join(LANGUAGES[l]["display"] for l in langs) + " |")
-    lines.append("|---|-------|" + "|".join("---" for _ in langs) + "|")
-
-    for num in sorted(problems, key=lambda x: int(x)):
-        p = problems[num]
-        row = f"| {int(num)} | {p['title']} | " + " | ".join(p.get(lang, "❌") for lang in langs) + " |"
-        lines.append(row)
-
-    with open(PROGRESS_FILE, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
-
-def update_readme(problems):
-    """Update README with snapshot + link to PROGRESS.md."""
-    total = len(problems)
-    langs = list(LANGUAGES.values())
-
-    snapshot = f"""
-## 📊 Progress Snapshot
-
-- Problems Solved: **{total}**
-- Languages: { " | ".join(l["display"] for l in langs) }
-- Daily Challenge: ✅ Ongoing
-
-👉 [View Full Progress](./{PROGRESS_FILE})
-"""
-
-    with open(README_FILE, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    # Replace old snapshot (if exists)
-    new_content = re.sub(r"## 📊 Progress Snapshot[\s\S]*?(👉 \[View Full Progress\]\(.*\))",
-                         snapshot.strip(), content, flags=re.MULTILINE)
-
-    if new_content == content:  # no snapshot before, just append
-        new_content += "\n\n" + snapshot
-
-    with open(README_FILE, "w", encoding="utf-8") as f:
-        f.write(new_content)
-
+    with open(README, "w", encoding="utf-8") as f:
+        f.write(readme)
 
 if __name__ == "__main__":
-    process_daily_challenges()
-    problems = collect_progress()
-    update_progress_md(problems)
-    update_readme(problems)
+    solved = copy_daily_solutions()
+    update_progress_table(solved)
