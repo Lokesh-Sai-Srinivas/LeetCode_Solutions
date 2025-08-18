@@ -115,3 +115,13 @@ Let’s keep coding and keep growing! 🌱💻
 - Daily Challenge: ✅ Ongoing
 
 👉 [View Full Progress](./PROGRESS.md)
+
+
+
+## 📊 Progress Snapshot
+
+- Problems Solved: **1**
+- Languages: C++ ⚡ | Java ☕ | Python 🐍
+- Daily Challenge: ✅ Ongoing
+
+👉 [View Full Progress](./PROGRESS.md)
