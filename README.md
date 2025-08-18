@@ -100,7 +100,7 @@ Let’s keep coding and keep growing! 🌱💻
 
 ## 📊 Progress Snapshot
 
-- Problems Solved: **2**
+- Problems Solved: **1**
 - Languages: C++ ⚡ | Java ☕ | Python 🐍
 - Daily Challenge: ✅ Ongoing
 
