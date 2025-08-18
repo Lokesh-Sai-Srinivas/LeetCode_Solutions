@@ -28,8 +28,12 @@ LANGUAGES = {
 # Map ext → lang key for lookup
 EXT_TO_LANG = {v["ext"].lstrip("."): k for k, v in LANGUAGES.items()}
 
-# Language folders
-LANG_DIRS = {lang: os.path.join(BASE_DIR, lang) for lang in LANGUAGES}
+# -------- Helpers --------
+def get_lang_dir(lang):
+    """Return the folder path for a language, creating it if missing."""
+    path = os.path.join(BASE_DIR, lang)
+    os.makedirs(path, exist_ok=True)
+    return path
 
 # -------- Filename Styles --------
 def get_filename(problem_id, title, lang):
@@ -79,9 +83,7 @@ def copy_daily_solutions():
                 continue
 
             target_name = get_filename(problem_id, title, lang)
-            target_path = os.path.join(LANG_DIRS[lang], target_name)
-
-            os.makedirs(LANG_DIRS[lang], exist_ok=True)
+            target_path = os.path.join(get_lang_dir(lang), target_name)
 
             if not os.path.exists(target_path):
                 shutil.copyfile(os.path.join(day_path, file), target_path)
@@ -91,7 +93,8 @@ def build_progress():
     solved = {}
     active_langs = set()
 
-    for lang, folder in LANG_DIRS.items():
+    for lang in LANGUAGES:
+        folder = os.path.join(BASE_DIR, lang)
         if not os.path.exists(folder):
             continue
 
@@ -153,6 +156,6 @@ def update_progress_table(solved):
 # -------- Main --------
 if __name__ == "__main__":
     copy_daily_solutions()
-    solved, _ = build_progress()
+    solved, active_langs = build_progress()
     if solved:
         update_progress_table(solved)
