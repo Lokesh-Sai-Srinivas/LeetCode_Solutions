@@ -110,21 +110,24 @@ def build_progress():
     return solved, active_langs
 
 # -------- Step 3: Update Markdown --------
-def update_progress_table(solved, active_langs):
-    # keep language order
-    langs_order = [l for l in LANGUAGES if l in active_langs]
+def update_progress_table(solved):
+    # --- Detect active languages (with at least one ✅) ---
+    active_langs = []
+    for lang in LANGUAGES:
+        if any(solved[pid][lang] == "✅" for pid in solved):
+            active_langs.append(lang)
 
     # Build header
     header = "| # | Title | " + " | ".join(
-        f"{LANGUAGES[l]['display']} {LANGUAGES[l]['emoji']}" for l in langs_order
+        f"{LANGUAGES[l]['display']} {LANGUAGES[l]['emoji']}" for l in active_langs
     ) + " |\n"
-    header += "|---|-------|" + "|".join("---" for _ in langs_order) + "|\n"
+    header += "|---|-------|" + "|".join("---" for _ in active_langs) + "|\n"
 
     # Build rows
     rows = []
     for pid in sorted(solved.keys(), key=lambda x: int(x)):
         row = f"| {int(pid)} | {solved[pid]['title']} | " + " | ".join(
-            solved[pid][l] for l in langs_order
+            solved[pid][l] for l in active_langs
         ) + " |"
         rows.append(row)
 
@@ -145,6 +148,7 @@ def update_progress_table(solved, active_langs):
 
     with open(README, "w", encoding="utf-8") as f:
         f.write(readme)
+
 
 # -------- Main --------
 if __name__ == "__main__":
