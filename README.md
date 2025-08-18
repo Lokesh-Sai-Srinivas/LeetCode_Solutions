@@ -55,6 +55,15 @@ Every solution is a tiny step, but together they form a giant leap 🚀
 
 ---
 
+## 📊 Problem Progress Tracker
+
+| #   | Title                          | Difficulty | Python | Java | C++ |
+|-----|--------------------------------|------------|--------|------|-----|
+| 1   | Two Sum                        | Easy       | ✅ | ✅ | ✅ |
+| 2   | Add Two Numbers                | Medium     | ✅ | ✅ | ✅ |
+
+---
+
 ## 📝 Commit Messages
 
 I like to keep things clean, so my commit messages follow this style:
@@ -71,6 +80,8 @@ I like to keep things clean, so my commit messages follow this style:
 This way I always know what’s what at a glance 👀
 
 ---
+
+
 
 ## 🌟 My Goals
 
