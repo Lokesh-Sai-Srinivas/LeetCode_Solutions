@@ -28,6 +28,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add README.md
+          git add README.md PROGRESS.md
           git commit -m "auto: update progress table" || echo "No changes"
           git push
