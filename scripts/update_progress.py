@@ -153,6 +153,6 @@ def update_progress_table(solved):
 # -------- Main --------
 if __name__ == "__main__":
     copy_daily_solutions()
-    solved, active_langs = build_progress()
+    solved, _ = build_progress()
     if solved:
-        update_progress_table(solved, active_langs)
+        update_progress_table(solved)
