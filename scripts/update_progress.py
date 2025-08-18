@@ -10,19 +10,19 @@ PROGRESS = os.path.join(BASE_DIR, "PROGRESS.md")
 
 # -------- Languages --------
 LANGUAGES = {
-    "cpp":      { "ext": ".cpp",   "emoji": "⚡",  "display": "C++" },
-    "java":     { "ext": ".java",  "emoji": "☕",  "display": "Java" },
-    "python":   { "ext": ".py",    "emoji": "🐍",  "display": "Python" },
-    "golang":   { "ext": ".go",    "emoji": "🐹",  "display": "Go" },
-    "rust":     { "ext": ".rs",    "emoji": "🦀",  "display": "Rust" },
-    "javascript": { "ext": ".js",  "emoji": "🌐",  "display": "JavaScript" },
-    "typescript": { "ext": ".ts",  "emoji": "🔷",  "display": "TypeScript" },
-    "kotlin":   { "ext": ".kt",    "emoji": "🎯",  "display": "Kotlin" },
-    "swift":    { "ext": ".swift", "emoji": "🍎",  "display": "Swift" },
-    "csharp":   { "ext": ".cs",    "emoji": "🎮",  "display": "C#" },
-    "ruby":     { "ext": ".rb",    "emoji": "💎",  "display": "Ruby" },
-    "php":      { "ext": ".php",   "emoji": "🐘",  "display": "PHP" },
-    "scala":    { "ext": ".scala", "emoji": "🔥",  "display": "Scala" },
+    "cpp":        {"ext": ".cpp",   "emoji": "⚡", "display": "C++"},
+    "java":       {"ext": ".java",  "emoji": "☕", "display": "Java"},
+    "python":     {"ext": ".py",    "emoji": "🐍", "display": "Python"},
+    "golang":     {"ext": ".go",    "emoji": "🐹", "display": "Go"},
+    "rust":       {"ext": ".rs",    "emoji": "🦀", "display": "Rust"},
+    "javascript": {"ext": ".js",    "emoji": "🌐", "display": "JavaScript"},
+    "typescript": {"ext": ".ts",    "emoji": "🔷", "display": "TypeScript"},
+    "kotlin":     {"ext": ".kt",    "emoji": "🎯", "display": "Kotlin"},
+    "swift":      {"ext": ".swift", "emoji": "🍎", "display": "Swift"},
+    "csharp":     {"ext": ".cs",    "emoji": "🎮", "display": "C#"},
+    "ruby":       {"ext": ".rb",    "emoji": "💎", "display": "Ruby"},
+    "php":        {"ext": ".php",   "emoji": "🐘", "display": "PHP"},
+    "scala":      {"ext": ".scala", "emoji": "🔥", "display": "Scala"},
 }
 
 # Map ext → lang key for lookup
@@ -89,6 +89,7 @@ def copy_daily_solutions():
 # -------- Step 2: Build progress from language folders --------
 def build_progress():
     solved = {}
+    active_langs = set()
 
     for lang, folder in LANG_DIRS.items():
         if not os.path.exists(folder):
@@ -102,23 +103,28 @@ def build_progress():
 
             if problem_id not in solved:
                 solved[problem_id] = {"title": title, **{l: "❌" for l in LANGUAGES}}
-            solved[problem_id][lang] = "✅"
 
-    return solved
+            solved[problem_id][lang] = "✅"
+            active_langs.add(lang)
+
+    return solved, active_langs
 
 # -------- Step 3: Update Markdown --------
-def update_progress_table(solved):
+def update_progress_table(solved, active_langs):
+    # keep language order
+    langs_order = [l for l in LANGUAGES if l in active_langs]
+
     # Build header
     header = "| # | Title | " + " | ".join(
-        f"{LANGUAGES[l]['display']} {LANGUAGES[l]['emoji']}" for l in LANGUAGES
+        f"{LANGUAGES[l]['display']} {LANGUAGES[l]['emoji']}" for l in langs_order
     ) + " |\n"
-    header += "|---|-------|" + "|".join("---" for _ in LANGUAGES) + "|\n"
+    header += "|---|-------|" + "|".join("---" for _ in langs_order) + "|\n"
 
     # Build rows
     rows = []
     for pid in sorted(solved.keys(), key=lambda x: int(x)):
         row = f"| {int(pid)} | {solved[pid]['title']} | " + " | ".join(
-            solved[pid][l] for l in LANGUAGES
+            solved[pid][l] for l in langs_order
         ) + " |"
         rows.append(row)
 
@@ -143,5 +149,6 @@ def update_progress_table(solved):
 # -------- Main --------
 if __name__ == "__main__":
     copy_daily_solutions()
-    solved = build_progress()
-    update_progress_table(solved)
+    solved, active_langs = build_progress()
+    if solved:
+        update_progress_table(solved, active_langs)
