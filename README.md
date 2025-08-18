@@ -91,3 +91,7 @@ Let’s keep coding and keep growing! 🌱💻
 ---
 
 ## 📊 Problem Progress Tracker
+
+| # | Title | cpp | java | python |
+|---|-------|--------|--------|--------|
+| 1 | Two Sum | ✅ | ✅ | ✅ |
