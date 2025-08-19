@@ -108,3 +108,12 @@ Let’s keep coding and keep growing! 🌱💻
 | 1323 | ✅ | ✅ | ✅ |
 | 2264 | ✅ | ✅ | ✅ |
 | 2348 | ✅ | ✅ | ✅ |
+
+
+## 📊 Progress Snapshot
+
+- Problems Solved: **8**
+- Languages: C++ ⚡ | Java ☕ | Python 🐍
+- Daily Challenge: ✅ Ongoing
+
+👉 [View Full Progress](./PROGRESS.md)
