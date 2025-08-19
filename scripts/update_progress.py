@@ -58,15 +58,17 @@ def sync_daily_challenges():
 
             path = os.path.join(root, file)
 
-            # Extract problem ID + name from header
+            # Extract problem ID + name from header (comment-style agnostic)
             problem_id, problem_name = None, None
             try:
                 with open(path, "r", encoding="utf-8") as f:
                     content = f.read()
             except Exception:
+                print(f"⚠️ Could not read {path}")
                 continue
 
-            match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content)
+            # Match "Problem: 2348 - Some Name" regardless of case
+            match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content, re.IGNORECASE)
             if match:
                 problem_id = match.group(1).zfill(4)  # normalize e.g. 326 -> 0326
                 problem_name = (
@@ -78,6 +80,7 @@ def sync_daily_challenges():
                 )
 
             if not problem_id:
+                print(f"⚠️ Skipped {file} (could not extract problem ID)")
                 continue
 
             # Destination filename
