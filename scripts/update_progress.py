@@ -54,8 +54,7 @@ def sync_daily_challenges():
 
             lang = EXT_TO_LANG[ext]
             lang_folder = os.path.join(lang)
-            if not os.path.exists(lang_folder):
-                os.makedirs(lang_folder)
+            os.makedirs(lang_folder, exist_ok=True)
 
             path = os.path.join(root, file)
 
@@ -70,7 +69,13 @@ def sync_daily_challenges():
             match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content)
             if match:
                 problem_id = match.group(1).zfill(4)  # normalize (e.g. 326 -> 0326)
-                problem_name = match.group(2).strip().lower().replace(" ", "_").replace("-", "_")
+                problem_name = (
+                    match.group(2)
+                    .strip()
+                    .lower()
+                    .replace(" ", "_")
+                    .replace("-", "_")
+                )
 
             if not problem_id:
                 continue
@@ -79,11 +84,9 @@ def sync_daily_challenges():
             dest_name = f"{problem_id}_{problem_name}{ext}" if problem_name else f"{problem_id}{ext}"
             dest_path = os.path.join(lang_folder, dest_name)
 
-            # Copy only if not already present
-            if not os.path.exists(dest_path):
-                shutil.copy(path, dest_path)
-                print(f"✅ Copied {file} → {dest_path}")
-
+            # Always copy (overwrite to sync)
+            shutil.copy(path, dest_path)
+            print(f"✅ Synced {file} → {dest_path}")
 
 def get_solved_problems():
     """Scan language folders and return solved problems dictionary."""
