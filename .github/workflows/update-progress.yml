@@ -1,16 +1,17 @@
-name: Update Progress Table
+name: Update Progress
 
 on:
   push:
     branches:
       - main
-  pull_request:
+      - master
 
 jobs:
-  update-progress:
+  sync-progress:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -18,14 +19,13 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Run progress update script
-        run: |
-          python scripts/update_progress.py
+      - name: Run Sync Script
+        run: python sync_progress.py
 
-      - name: Commit and push changes
+      - name: Commit and Push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md PROGRESS.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update progress table"
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add -A
+          git commit -m "🔄 Auto-update progress [skip ci]" || echo "No changes"
           git push
