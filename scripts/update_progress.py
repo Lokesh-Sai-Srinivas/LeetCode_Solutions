@@ -42,7 +42,7 @@ EXT_TO_LANG = {
 
 
 def sync_daily_challenges():
-    """Copy daily-challenge solution.* files into respective language folders (always overwrite)."""
+    """Copy daily-challenge/<date>/solution.* into respective language folders (always overwrite)."""
     if not os.path.exists("daily-challenge"):
         return
 
@@ -58,7 +58,7 @@ def sync_daily_challenges():
 
             path = os.path.join(root, file)
 
-            # Extract problem ID + name from header (comment-style agnostic)
+            # Extract problem ID + name from header
             problem_id, problem_name = None, None
             try:
                 with open(path, "r", encoding="utf-8") as f:
@@ -67,10 +67,9 @@ def sync_daily_challenges():
                 print(f"⚠️ Could not read {path}")
                 continue
 
-            # Match "Problem: 2348 - Some Name" regardless of case
             match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content, re.IGNORECASE)
             if match:
-                problem_id = match.group(1).zfill(4)  # normalize e.g. 326 -> 0326
+                problem_id = match.group(1).zfill(4)
                 problem_name = (
                     match.group(2)
                     .strip()
@@ -79,15 +78,16 @@ def sync_daily_challenges():
                     .replace("-", "_")
                 )
 
+            # fallback if header missing → use date folder
             if not problem_id:
-                print(f"⚠️ Skipped {file} (could not extract problem ID)")
-                continue
+                date_folder = os.path.basename(root)
+                problem_id = date_folder.replace("-", "")  # e.g. 20250813
+                problem_name = "unspecified"
 
             # Destination filename
-            dest_name = f"{problem_id}_{problem_name}{ext}" if problem_name else f"{problem_id}{ext}"
+            dest_name = f"{problem_id}_{problem_name}{ext}"
             dest_path = os.path.join(lang_folder, dest_name)
 
-            # Always overwrite to sync latest changes
             shutil.copy(path, dest_path)
             print(f"✅ Synced {file} → {dest_path}")
 
