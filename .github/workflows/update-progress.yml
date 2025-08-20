@@ -19,8 +19,8 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Run Sync Script
-        run: python sync_progress.py
+      - name: Run progress update script
+        run: python script/update_progress.py
 
       - name: Commit and Push changes
         run: |
