@@ -20,7 +20,7 @@ jobs:
           python-version: "3.x"
 
       - name: Run progress update script
-        run: python script/update_progress.py
+        run: python scripts/update_progress.py
 
       - name: Commit and Push changes
         run: |
