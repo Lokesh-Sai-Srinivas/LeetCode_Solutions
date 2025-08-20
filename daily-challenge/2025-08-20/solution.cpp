@@ -1,7 +1,7 @@
 """
-Problem: 2348 - Number of Zero-Filled Subarrays  
-Description: Given an integer array nums, return the number of contiguous subarrays that are filled with 0. A subarray is a contiguous non-empty sequence of elements within an array.  
-Date: 2025-08-19
+Problem: 1277 - Count Square Submatrices with All Ones  
+Description: Given a binary matrix, count the number of square submatrices that have all ones. Each square must be contiguous and filled entirely with 1s.  
+Date: 2025-08-20
 """
 
 class Solution {
