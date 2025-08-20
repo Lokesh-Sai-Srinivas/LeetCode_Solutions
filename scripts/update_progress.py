@@ -17,7 +17,7 @@ LANG_FOLDERS = [
     "typescript",
     "rust",
     "scala",
-    "php"
+    "php",
 ]
 
 README_FILE = "README.md"
@@ -42,12 +42,16 @@ EXT_TO_LANG = {
 
 
 def sync_daily_challenges():
-    """Copy daily-challenge/<date>/solution.* into respective language folders (always overwrite)."""
+    """Copy daily-challenge/YYYY-MM-DD/solution.* files into respective language folders."""
     if not os.path.exists("daily-challenge"):
         return
 
-    for root, _, files in os.walk("daily-challenge"):
-        for file in files:
+    for date_folder in os.listdir("daily-challenge"):
+        date_path = os.path.join("daily-challenge", date_folder)
+        if not os.path.isdir(date_path):
+            continue
+
+        for file in os.listdir(date_path):
             _, ext = os.path.splitext(file)
             if not file.startswith("solution.") or ext not in EXT_TO_LANG:
                 continue
@@ -56,7 +60,7 @@ def sync_daily_challenges():
             lang_folder = os.path.join(lang)
             os.makedirs(lang_folder, exist_ok=True)
 
-            path = os.path.join(root, file)
+            path = os.path.join(date_path, file)
 
             # Extract problem ID + name from header
             problem_id, problem_name = None, None
@@ -69,7 +73,7 @@ def sync_daily_challenges():
 
             match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content, re.IGNORECASE)
             if match:
-                problem_id = match.group(1).zfill(4)
+                problem_id = match.group(1).zfill(4)  # normalize e.g. 326 -> 0326
                 problem_name = (
                     match.group(2)
                     .strip()
@@ -78,18 +82,15 @@ def sync_daily_challenges():
                     .replace("-", "_")
                 )
 
-            # fallback if header missing → use date folder
             if not problem_id:
-                date_folder = os.path.basename(root)
-                problem_id = date_folder.replace("-", "")  # e.g. 20250813
-                problem_name = "unspecified"
+                print(f"⚠️ Skipped {file} (could not extract problem ID)")
+                continue
 
-            # Destination filename
-            dest_name = f"{problem_id}_{problem_name}{ext}"
+            dest_name = f"{problem_id}_{problem_name}{ext}" if problem_name else f"{problem_id}{ext}"
             dest_path = os.path.join(lang_folder, dest_name)
 
-            shutil.copy(path, dest_path)
-            print(f"✅ Synced {file} → {dest_path}")
+            shutil.copy(path, dest_path)  # always overwrite
+            print(f"✅ Synced {file} ({date_folder}) → {dest_path}")
 
 
 def get_solved_problems():
@@ -103,10 +104,9 @@ def get_solved_problems():
         for file in os.listdir(lang):
             _, ext = os.path.splitext(file)
             if ext in EXT_TO_LANG:
-                # Extract problem number
                 match = re.match(r"^(\d+)", file)
                 if match:
-                    problem_id = match.group(1).zfill(4)  # normalize
+                    problem_id = match.group(1).zfill(4)
                     solved[problem_id].add(lang)
 
     return solved
@@ -152,7 +152,7 @@ def update_progress_table(solved, active_langs):
 
 
 if __name__ == "__main__":
-    sync_daily_challenges()   # Step 1: sync daily-challenge → lang folders
-    solved = get_solved_problems()  # Step 2: scan lang folders
+    sync_daily_challenges()
+    solved = get_solved_problems()
     active_langs = [lang for lang in LANG_FOLDERS if os.path.exists(lang)]
-    update_progress_table(solved, active_langs)  # Step 3: update logs
+    update_progress_table(solved, active_langs)
