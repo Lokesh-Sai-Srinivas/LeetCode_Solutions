@@ -1,6 +1,6 @@
 # Progress Overview
 
-**Total Solved:** 11
+**Total Solved:** 12
 
 | Problem | python | cpp | java |
 |---------|:---:|:---:|:---:|
@@ -15,3 +15,4 @@
 | 2264 | ✅ | ✅ | ✅ |
 | 2348 | ✅ | ✅ | ✅ |
 | 3195 | ✅ | ✅ | ✅ |
+| 3197 | ✅ | ❌ | ❌ |
