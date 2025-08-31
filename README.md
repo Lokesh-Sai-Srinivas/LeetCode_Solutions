@@ -96,12 +96,13 @@ Let’s keep coding and keep growing! 🌱💻
 
 # Progress Overview
 
-**Total Solved:** 19
+**Total Solved:** 20
 
 | Problem | python | cpp | java |
 |---------|:---:|:---:|:---:|
 | 0001 | ✅ | ✅ | ✅ |
 | 0036 | ✅ | ✅ | ✅ |
+| 0037 | ✅ | ❌ | ❌ |
 | 0326 | ✅ | ✅ | ✅ |
 | 0342 | ✅ | ✅ | ✅ |
 | 0498 | ✅ | ✅ | ✅ |
