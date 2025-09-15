@@ -96,7 +96,7 @@ Let’s keep coding and keep growing! 🌱💻
 
 # Progress Overview
 
-**Total Solved:** 34
+**Total Solved:** 35
 
 | Problem | python | cpp | java |
 |---------|:---:|:---:|:---:|
@@ -117,6 +117,7 @@ Let’s keep coding and keep growing! 🌱💻
 | 1504 | ✅ | ✅ | ✅ |
 | 1733 | ✅ | ✅ | ✅ |
 | 1792 | ✅ | ✅ | ✅ |
+| 1935 | ✅ | ❌ | ❌ |
 | 2264 | ✅ | ✅ | ✅ |
 | 2327 | ✅ | ✅ | ✅ |
 | 2348 | ✅ | ✅ | ✅ |
