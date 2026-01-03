@@ -9,3 +9,4 @@ Thumbs.db
 # Local temp
 .env
 .vscode/
+.idea/

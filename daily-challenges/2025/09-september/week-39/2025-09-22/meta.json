@@ -1,0 +1,19 @@
+{
+  "problem_id": 3005,
+  "title": "Count Elements With Maximum Frequency",
+  "difficulty": "Easy",
+  "date": "2025-09-22",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "count-elements-with-maximum-frequency",
+  "url": "https://leetcode.com/problems/count-elements-with-maximum-frequency/",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "id": 3005
+}

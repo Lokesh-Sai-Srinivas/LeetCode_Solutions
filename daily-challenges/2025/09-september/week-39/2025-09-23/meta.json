@@ -1,0 +1,18 @@
+{
+  "problem_id": 165,
+  "title": "Compare Version Numbers",
+  "difficulty": "Medium",
+  "date": "2025-09-23",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "compare-version-numbers",
+  "url": "https://leetcode.com/problems/compare-version-numbers/",
+  "topics": [
+    "Two Pointers",
+    "String"
+  ],
+  "id": 165
+}

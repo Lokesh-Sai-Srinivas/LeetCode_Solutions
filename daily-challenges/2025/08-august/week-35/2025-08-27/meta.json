@@ -1,0 +1,20 @@
+{
+  "problem_id": 3459,
+  "title": "Length of Longest V-Shaped Diagonal Segment",
+  "difficulty": "Hard",
+  "date": "2025-08-27",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "length-of-longest-v-shaped-diagonal-segment",
+  "url": "https://leetcode.com/problems/length-of-longest-v-shaped-diagonal-segment/",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Memoization",
+    "Matrix"
+  ],
+  "id": 3459
+}

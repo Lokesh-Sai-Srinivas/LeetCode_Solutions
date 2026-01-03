@@ -1,0 +1,19 @@
+{
+  "problem_id": 1733,
+  "title": "Minimum Number of People to Teach",
+  "difficulty": "Medium",
+  "date": "2025-09-10",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "minimum-number-of-people-to-teach",
+  "url": "https://leetcode.com/problems/minimum-number-of-people-to-teach/",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy"
+  ],
+  "id": 1733
+}

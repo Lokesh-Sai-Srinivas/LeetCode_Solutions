@@ -1,0 +1,19 @@
+{
+  "problem_id": 3495,
+  "title": "Minimum Operations to Make Array Elements Zero",
+  "difficulty": "Hard",
+  "date": "2025-09-06",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "minimum-operations-to-make-array-elements-zero",
+  "url": "https://leetcode.com/problems/minimum-operations-to-make-array-elements-zero/",
+  "topics": [
+    "Array",
+    "Math",
+    "Bit Manipulation"
+  ],
+  "id": 3495
+}

@@ -1,0 +1,18 @@
+{
+  "problem_id": 1039,
+  "title": "Minimum Score Triangulation of Polygon",
+  "difficulty": "Medium",
+  "date": "2025-09-29",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "minimum-score-triangulation-of-polygon",
+  "url": "https://leetcode.com/problems/minimum-score-triangulation-of-polygon/",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "id": 1039
+}

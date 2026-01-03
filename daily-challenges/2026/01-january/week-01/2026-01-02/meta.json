@@ -1,0 +1,14 @@
+{
+  "problem_id": 961,
+  "title": "N-Repeated Element in Size 2N Array",
+  "difficulty": "Easy",
+  "date": "2026-01-02",
+  "url": "https://leetcode.com/problems/n-repeated-element-in-size-2n-array/description/?envType=daily-question&envId=2026-01-02",
+  "solutions": {
+    "cpp": "cpp.cpp",
+    "java": "java.java",
+    "python": "python.py"
+  },
+  "slug": "n-repeated-element-in-size-2n-array",
+  "topics": []
+}

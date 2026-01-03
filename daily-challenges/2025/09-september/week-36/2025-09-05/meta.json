@@ -1,0 +1,19 @@
+{
+  "problem_id": 2749,
+  "title": "Minimum Operations to Make the Integer Zero",
+  "difficulty": "Medium",
+  "date": "2025-09-05",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "minimum-operations-to-make-the-integer-zero",
+  "url": "https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/",
+  "topics": [
+    "Bit Manipulation",
+    "Brainteaser",
+    "Enumeration"
+  ],
+  "id": 2749
+}

@@ -1,0 +1,18 @@
+{
+  "problem_id": 1935,
+  "title": "Maximum Number of Words You Can Type",
+  "difficulty": "Easy",
+  "date": "2025-09-15",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "maximum-number-of-words-you-can-type",
+  "url": "https://leetcode.com/problems/maximum-number-of-words-you-can-type/",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "id": 1935
+}

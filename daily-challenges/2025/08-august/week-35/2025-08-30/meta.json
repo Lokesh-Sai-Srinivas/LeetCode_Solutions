@@ -1,0 +1,19 @@
+{
+  "problem_id": 36,
+  "title": "Valid Sudoku",
+  "difficulty": "Medium",
+  "date": "2025-08-30",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "valid-sudoku",
+  "url": "https://leetcode.com/problems/valid-sudoku/",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Matrix"
+  ],
+  "id": 36
+}

@@ -1,0 +1,19 @@
+{
+  "problem_id": 3541,
+  "title": "Find Most Frequent Vowel and Consonant",
+  "difficulty": "Easy",
+  "date": "2025-09-13",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "find-most-frequent-vowel-and-consonant",
+  "url": "https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "id": 3541
+}

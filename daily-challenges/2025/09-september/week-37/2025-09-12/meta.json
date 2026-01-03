@@ -1,0 +1,20 @@
+{
+  "problem_id": 3227,
+  "title": "Vowels Game in a String",
+  "difficulty": "Medium",
+  "date": "2025-09-12",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "vowels-game-in-a-string",
+  "url": "https://leetcode.com/problems/vowels-game-in-a-string/",
+  "topics": [
+    "Math",
+    "String",
+    "Brainteaser",
+    "Game Theory"
+  ],
+  "id": 3227
+}

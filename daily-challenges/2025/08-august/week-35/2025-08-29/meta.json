@@ -1,0 +1,17 @@
+{
+  "problem_id": 3021,
+  "title": "Alice and Bob Playing Flower Game",
+  "difficulty": "Medium",
+  "date": "2025-08-29",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "alice-and-bob-playing-flower-game",
+  "url": "https://leetcode.com/problems/alice-and-bob-playing-flower-game/",
+  "topics": [
+    "Math"
+  ],
+  "id": 3021
+}

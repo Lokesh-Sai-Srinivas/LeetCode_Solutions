@@ -1,0 +1,19 @@
+{
+  "problem_id": 342,
+  "title": "Power of Four",
+  "difficulty": "Easy",
+  "date": "2025-08-15",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "power-of-four",
+  "url": "https://leetcode.com/problems/power-of-four/",
+  "topics": [
+    "Math",
+    "Bit Manipulation",
+    "Recursion"
+  ],
+  "id": 342
+}

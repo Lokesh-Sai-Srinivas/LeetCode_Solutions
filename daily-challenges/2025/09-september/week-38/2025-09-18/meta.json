@@ -1,0 +1,20 @@
+{
+  "problem_id": 3408,
+  "title": "Design Task Manager",
+  "difficulty": "Medium",
+  "date": "2025-09-18",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "design-task-manager",
+  "url": "https://leetcode.com/problems/design-task-manager/",
+  "topics": [
+    "Hash Table",
+    "Design",
+    "Heap (Priority Queue)",
+    "Ordered Set"
+  ],
+  "id": 3408
+}

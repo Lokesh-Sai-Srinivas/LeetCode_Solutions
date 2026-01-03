@@ -1,0 +1,21 @@
+{
+  "problem_id": 611,
+  "title": "Valid Triangle Number",
+  "difficulty": "Medium",
+  "date": "2025-09-26",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "valid-triangle-number",
+  "url": "https://leetcode.com/problems/valid-triangle-number/",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Greedy",
+    "Sorting"
+  ],
+  "id": 611
+}

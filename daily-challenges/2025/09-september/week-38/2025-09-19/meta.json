@@ -1,0 +1,21 @@
+{
+  "problem_id": 3484,
+  "title": "Design Spreadsheet",
+  "difficulty": "Medium",
+  "date": "2025-09-19",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "design-spreadsheet",
+  "url": "https://leetcode.com/problems/design-spreadsheet/",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Design",
+    "Matrix"
+  ],
+  "id": 3484
+}

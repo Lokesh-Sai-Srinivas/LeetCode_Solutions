@@ -1,0 +1,19 @@
+{
+  "problem_id": 966,
+  "title": "Vowel Spellchecker",
+  "difficulty": "Medium",
+  "date": "2025-09-14",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "vowel-spellchecker",
+  "url": "https://leetcode.com/problems/vowel-spellchecker/",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "id": 966
+}

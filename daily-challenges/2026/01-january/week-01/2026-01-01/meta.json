@@ -1,0 +1,17 @@
+{
+  "problem_id": 66,
+  "title": "Plus One",
+  "difficulty": "Easy",
+  "date": "2026-01-01",
+  "url": "https://leetcode.com/problems/plus-one/description/1872710729/?envType=daily-question&envId=2026-01-02",
+  "solutions": {
+    "python": "python.py",
+    "cpp": "cpp.cpp",
+    "java": "java.java"
+  },
+  "slug": "plus-one",
+  "topics": [
+    "Array",
+    "Math"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "problem_id": 1277,
+  "title": "Count Square Submatrices with All Ones",
+  "difficulty": "Medium",
+  "date": "2025-08-20",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "count-square-submatrices-with-all-ones",
+  "url": "https://leetcode.com/problems/count-square-submatrices-with-all-ones/",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "id": 1277
+}

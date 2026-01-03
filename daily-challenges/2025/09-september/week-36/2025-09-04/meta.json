@@ -1,0 +1,17 @@
+{
+  "problem_id": 3516,
+  "title": "Find Closest Person",
+  "difficulty": "Easy",
+  "date": "2025-09-04",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "find-closest-person",
+  "url": "https://leetcode.com/problems/find-closest-person/",
+  "topics": [
+    "Math"
+  ],
+  "id": 3516
+}

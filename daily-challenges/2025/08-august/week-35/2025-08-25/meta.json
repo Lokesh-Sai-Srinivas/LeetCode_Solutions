@@ -1,0 +1,19 @@
+{
+  "problem_id": 498,
+  "title": "Diagonal Traverse",
+  "difficulty": "Medium",
+  "date": "2025-08-25",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "diagonal-traverse",
+  "url": "https://leetcode.com/problems/diagonal-traverse/",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "id": 498
+}

@@ -1,0 +1,21 @@
+{
+  "problem_id": 3025,
+  "title": "Find the Number of Ways to Place People I",
+  "difficulty": "Medium",
+  "date": "2025-09-02",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "find-the-number-of-ways-to-place-people-i",
+  "url": "https://leetcode.com/problems/find-the-number-of-ways-to-place-people-i/",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry",
+    "Sorting",
+    "Enumeration"
+  ],
+  "id": 3025
+}

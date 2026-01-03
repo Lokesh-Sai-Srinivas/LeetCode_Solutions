@@ -1,0 +1,18 @@
+{
+  "problem_id": 120,
+  "title": "Triangle",
+  "difficulty": "Medium",
+  "date": "2025-09-25",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "triangle",
+  "url": "https://leetcode.com/problems/triangle/",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "id": 120
+}

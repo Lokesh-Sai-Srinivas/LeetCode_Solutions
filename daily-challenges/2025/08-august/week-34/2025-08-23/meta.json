@@ -1,0 +1,19 @@
+{
+  "problem_id": 3197,
+  "title": "Find the Minimum Area to Cover All Ones II",
+  "difficulty": "Hard",
+  "date": "2025-08-23",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "find-the-minimum-area-to-cover-all-ones-ii",
+  "url": "https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-ii/",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Enumeration"
+  ],
+  "id": 3197
+}

@@ -1,0 +1,20 @@
+{
+  "problem_id": 837,
+  "title": "New 21 Game",
+  "difficulty": "Medium",
+  "date": "2025-08-17",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "new-21-game",
+  "url": "https://leetcode.com/problems/new-21-game/",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Sliding Window",
+    "Probability and Statistics"
+  ],
+  "id": 837
+}

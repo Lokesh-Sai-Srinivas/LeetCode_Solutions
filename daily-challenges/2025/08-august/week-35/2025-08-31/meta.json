@@ -1,0 +1,20 @@
+{
+  "problem_id": 37,
+  "title": "Sudoku Solver",
+  "difficulty": "Hard",
+  "date": "2025-08-31",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "sudoku-solver",
+  "url": "https://leetcode.com/problems/sudoku-solver/",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Backtracking",
+    "Matrix"
+  ],
+  "id": 37
+}

@@ -1,0 +1,19 @@
+{
+  "problem_id": 2327,
+  "title": "Number of People Aware of a Secret",
+  "difficulty": "Medium",
+  "date": "2025-09-09",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "number-of-people-aware-of-a-secret",
+  "url": "https://leetcode.com/problems/number-of-people-aware-of-a-secret/",
+  "topics": [
+    "Dynamic Programming",
+    "Queue",
+    "Simulation"
+  ],
+  "id": 2327
+}

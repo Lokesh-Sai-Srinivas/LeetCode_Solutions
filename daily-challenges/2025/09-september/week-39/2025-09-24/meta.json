@@ -1,0 +1,19 @@
+{
+  "problem_id": 166,
+  "title": "Fraction to Recurring Decimal",
+  "difficulty": "Medium",
+  "date": "2025-09-24",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "fraction-to-recurring-decimal",
+  "url": "https://leetcode.com/problems/fraction-to-recurring-decimal/",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String"
+  ],
+  "id": 166
+}

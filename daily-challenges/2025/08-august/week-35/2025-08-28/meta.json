@@ -1,0 +1,19 @@
+{
+  "problem_id": 3446,
+  "title": "Sort Matrix by Diagonals",
+  "difficulty": "Medium",
+  "date": "2025-08-28",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "sort-matrix-by-diagonals",
+  "url": "https://leetcode.com/problems/sort-matrix-by-diagonals/",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Matrix"
+  ],
+  "id": 3446
+}

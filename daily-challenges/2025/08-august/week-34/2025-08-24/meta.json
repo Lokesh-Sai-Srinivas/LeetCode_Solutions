@@ -1,0 +1,19 @@
+{
+  "problem_id": 1493,
+  "title": "Longest Subarray of 1's After Deleting One Element",
+  "difficulty": "Medium",
+  "date": "2025-08-24",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "longest-subarray-of-1s-after-deleting-one-element",
+  "url": "https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Sliding Window"
+  ],
+  "id": 1493
+}

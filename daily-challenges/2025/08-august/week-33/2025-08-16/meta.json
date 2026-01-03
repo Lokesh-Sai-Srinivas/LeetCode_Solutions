@@ -1,0 +1,18 @@
+{
+  "problem_id": 1323,
+  "title": "Maximum 69 Number",
+  "difficulty": "Easy",
+  "date": "2025-08-16",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "maximum-69-number",
+  "url": "https://leetcode.com/problems/maximum-69-number/",
+  "topics": [
+    "Math",
+    "Greedy"
+  ],
+  "id": 1323
+}

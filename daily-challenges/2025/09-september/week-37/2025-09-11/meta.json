@@ -1,0 +1,18 @@
+{
+  "problem_id": 2785,
+  "title": "Sort Vowels in a String",
+  "difficulty": "Medium",
+  "date": "2025-09-11",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "sort-vowels-in-a-string",
+  "url": "https://leetcode.com/problems/sort-vowels-in-a-string/",
+  "topics": [
+    "String",
+    "Sorting"
+  ],
+  "id": 2785
+}

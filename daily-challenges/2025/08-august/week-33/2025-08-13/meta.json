@@ -1,0 +1,18 @@
+{
+  "problem_id": 1,
+  "title": "Two Sum",
+  "difficulty": "Easy",
+  "date": "2025-08-13",
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  },
+  "slug": "two-sum",
+  "url": "https://leetcode.com/problems/two-sum/",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "id": 1
+}
