@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
-from datetime import datetime, timedelta
 from collections import defaultdict
+from datetime import date, timedelta
 
 # ---------- PATHS ----------
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,21 +12,24 @@ START = "<!-- HEATMAP:START -->"
 END = "<!-- HEATMAP:END -->"
 
 ACTIVE = "🟩"
-INACTIVE = "⬜"
+EMPTY = "⬜"
 
-DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+WEEKS = 13  # ~90 days
 
 
 # ---------- LOAD ACTIVITY ----------
 def load_activity():
-    activity = set()
+    activity = defaultdict(int)
+
+    if not DAILY.exists():
+        return activity
 
     for meta in DAILY.rglob("meta.json"):
         try:
             data = json.loads(meta.read_text(encoding="utf-8"))
-            date = data.get("date")
-            if date:
-                activity.add(datetime.strptime(date, "%Y-%m-%d").date())
+            d = data.get("date")
+            if d:
+                activity[d] += 1
         except Exception:
             pass
 
@@ -34,34 +37,33 @@ def load_activity():
 
 
 # ---------- BUILD HEATMAP ----------
-def build_heatmap(activity, days=90):
-    today = datetime.today().date()
-    start_day = today - timedelta(days=days - 1)
+def build_heatmap(activity):
+    today = date.today()
 
     # Align to Monday
-    start_day -= timedelta(days=start_day.weekday())
+    end = today - timedelta(days=today.weekday())
+    start = end - timedelta(weeks=WEEKS)
 
-    lines = ["📅 **Activity Heatmap (Last 90 Days)**\n"]
-    lines.append("Mon Tue Wed Thu Fri Sat Sun")
+    weeks = []
+    current = start
 
-    week = []
-    day = start_day
+    while current < end:
+        week = []
+        for i in range(7):
+            d = current + timedelta(days=i)
+            key = d.isoformat()
+            week.append(ACTIVE if activity.get(key, 0) > 0 else EMPTY)
+        weeks.append("  ".join(week))
+        current += timedelta(weeks=1)
 
-    while day <= today:
-        week.append(ACTIVE if day in activity else INACTIVE)
+    header = "Mon Tue Wed Thu Fri Sat Sun"
 
-        if len(week) == 7:
-            lines.append("  ".join(week))
-            week = []
-
-        day += timedelta(days=1)
-
-    if week:
-        while len(week) < 7:
-            week.append(INACTIVE)
-        lines.append("  ".join(week))
-
-    return "\n".join(lines)
+    return (
+        "📅 **Activity Heatmap (Last 90 Days)**\n\n"
+        + header
+        + "\n"
+        + "\n".join(weeks[-WEEKS:])
+    )
 
 
 # ---------- UPDATE README ----------
@@ -73,7 +75,15 @@ def update_readme(content):
         after = text.split(END)[1]
         text = before + START + "\n\n" + content + "\n\n" + END + after
     else:
-        text += f"\n\n{START}\n\n{content}\n\n{END}"
+        text += (
+            "\n\n## 📅 Activity Heatmap\n\n"
+            + START
+            + "\n\n"
+            + content
+            + "\n\n"
+            + END
+            + "\n"
+        )
 
     README.write_text(text, encoding="utf-8")
 
