@@ -1,5 +1,6 @@
 import os
 import re
+import json
 import shutil
 from pathlib import Path
 from collections import defaultdict
@@ -28,13 +29,36 @@ EXT_TO_LANG = {
     ".php": "php",
 }
 
-# ---------- FUNCTIONS ----------
+# ---------- HELPERS ----------
+def get_problem_urls():
+    """Map problem_id -> LeetCode URL from meta.json files"""
+    urls = {}
+
+    if not DAILY_FOLDER.exists():
+        return urls
+
+    for meta in DAILY_FOLDER.rglob("meta.json"):
+        try:
+            data = json.loads(meta.read_text(encoding="utf-8"))
+            pid = data.get("problem_id")
+            url = data.get("url")
+
+            if pid and url:
+                urls[str(pid).zfill(4)] = url
+        except Exception:
+            continue
+
+    return urls
+
+
+# ---------- SYNC DAILY SOLUTIONS ----------
 def sync_daily_challenges():
+    """Copy daily solutions into solutions-by-language folders"""
     if not DAILY_FOLDER.exists():
         return
 
-    for day in DAILY_FOLDER.rglob("solutions"):
-        for file in day.iterdir():
+    for solutions_dir in DAILY_FOLDER.rglob("solutions"):
+        for file in solutions_dir.iterdir():
             if not file.name.startswith("solution."):
                 continue
 
@@ -57,11 +81,12 @@ def sync_daily_challenges():
 
             pid = match.group(1).zfill(4)
             name = match.group(2).lower().replace(" ", "_").replace("-", "_")
-            dest = dest_dir / f"{pid}_{name}{ext}"
 
+            dest = dest_dir / f"{pid}_{name}{ext}"
             shutil.copy(file, dest)
 
 
+# ---------- COLLECT SOLVED ----------
 def get_solved():
     solved = defaultdict(set)
 
@@ -81,16 +106,22 @@ def get_solved():
     return solved
 
 
+# ---------- UPDATE PROGRESS ----------
 def update_progress():
     solved = get_solved()
+    problem_urls = get_problem_urls()
+
     active_langs = sorted({lang for langs in solved.values() for lang in langs})
 
-    header = "| Problem | " + " | ".join(active_langs) + " |\n"
-    header += "|---------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
+    header = "| Problem | Link | " + " | ".join(active_langs) + " |\n"
+    header += "|---------|------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
 
     rows = []
     for pid in sorted(solved):
-        row = f"| {pid} "
+        url = problem_urls.get(pid, "")
+        link = f"[🔗]({url})" if url else ""
+
+        row = f"| {pid} | {link} "
         for lang in active_langs:
             row += "| ✅ " if lang in solved[pid] else "| ❌ "
         row += "|"
@@ -99,8 +130,10 @@ def update_progress():
     table = header + "\n".join(rows)
     content = f"**Total Solved:** {len(solved)}\n\n" + table
 
+    # Write PROGRESS.md
     PROGRESS_FILE.write_text(content, encoding="utf-8")
 
+    # Update README
     readme = README_FILE.read_text(encoding="utf-8")
 
     start = "<!-- PROGRESS:START -->"
