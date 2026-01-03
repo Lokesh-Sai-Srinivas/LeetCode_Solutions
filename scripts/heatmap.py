@@ -16,11 +16,8 @@ EMPTY = "⬜"
 
 WEEKS = 13  # ~90 days
 
-
-# ---------- LOAD ACTIVITY ----------
 def load_activity():
     activity = defaultdict(int)
-
     if not DAILY.exists():
         return activity
 
@@ -31,64 +28,40 @@ def load_activity():
             if d:
                 activity[d] += 1
         except Exception:
-            pass
-
+            continue
     return activity
 
-
-# ---------- BUILD HEATMAP ----------
 def build_heatmap(activity):
     today = date.today()
-
-    # Align to Monday
     end = today - timedelta(days=today.weekday())
     start = end - timedelta(weeks=WEEKS)
-
     weeks = []
     current = start
 
     while current < end:
-        week = []
-        for i in range(7):
-            d = current + timedelta(days=i)
-            key = d.isoformat()
-            week.append(ACTIVE if activity.get(key, 0) > 0 else EMPTY)
-        weeks.append("  ".join(week))
+        week = [
+            ACTIVE if (current + timedelta(days=i)).isoformat() in activity 
+            else EMPTY 
+            for i in range(7)
+        ]
+        weeks.append("| " + " | ".join(week) + " |")
         current += timedelta(weeks=1)
 
-    header = "Mon Tue Wed Thu Fri Sat Sun"
+    header = "| Mon | Tue | Wed | Thu | Fri | Sat | Sun |\n" + \
+             "|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n"
+    
+    return "## 📅 Activity Heatmap\n\n" + header + "\n".join(weeks[-WEEKS:])
 
-    return (
-        "📅 **Activity Heatmap (Last 90 Days)**\n\n"
-        + header
-        + "\n"
-        + "\n".join(weeks[-WEEKS:])
-    )
-
-
-# ---------- UPDATE README ----------
 def update_readme(content):
     text = README.read_text(encoding="utf-8")
-
     if START in text and END in text:
         before = text.split(START)[0]
         after = text.split(END)[1]
         text = before + START + "\n\n" + content + "\n\n" + END + after
     else:
-        text += (
-            "\n\n## 📅 Activity Heatmap\n\n"
-            + START
-            + "\n\n"
-            + content
-            + "\n\n"
-            + END
-            + "\n"
-        )
-
+        text += f"\n\n{START}\n\n{content}\n\n{END}\n"
     README.write_text(text, encoding="utf-8")
 
-
-# ---------- RUN ----------
 if __name__ == "__main__":
     activity = load_activity()
     heatmap = build_heatmap(activity)
