@@ -30,7 +30,6 @@ jobs:
           python scripts/build_language_index.py
           python scripts/update_progress.py
           python scripts/streak.py
-          python scripts/heatmap.py
 
       - name: Commit changes
         run: |
