@@ -1,29 +1,20 @@
-import os
 import re
 import shutil
+from pathlib import Path
 from collections import defaultdict
 
-# Root folders where language solutions are stored
+# ---------- PATHS ----------
+ROOT = Path(__file__).resolve().parents[1]
+README_FILE = ROOT / "README.md"
+PROGRESS_FILE = ROOT / "PROGRESS.md"
+DAILY_FOLDER = ROOT / "daily-challenges"
+
+# ---------- CONFIG ----------
 LANG_FOLDERS = [
-    "python",
-    "cpp",
-    "java",
-    "golang",
-    "javascript",
-    "csharp",
-    "ruby",
-    "swift",
-    "kotlin",
-    "typescript",
-    "rust",
-    "scala",
-    "php",
+    "python", "cpp", "java", "golang", "javascript", "csharp",
+    "ruby", "swift", "kotlin", "typescript", "rust", "scala", "php",
 ]
 
-README_FILE = "README.md"
-PROGRESS_FILE = "PROGRESS.md"
-
-# Map file extensions to language folder names
 EXT_TO_LANG = {
     ".py": "python",
     ".cpp": "cpp",
@@ -40,119 +31,88 @@ EXT_TO_LANG = {
     ".php": "php",
 }
 
-
+# ---------- FUNCTIONS ----------
 def sync_daily_challenges():
-    """Copy daily-challenge/YYYY-MM-DD/solution.* files into respective language folders."""
-    if not os.path.exists("daily-challenge"):
+    if not DAILY_FOLDER.exists():
         return
 
-    for date_folder in os.listdir("daily-challenge"):
-        date_path = os.path.join("daily-challenge", date_folder)
-        if not os.path.isdir(date_path):
+    for date_dir in DAILY_FOLDER.iterdir():
+        if not date_dir.is_dir():
             continue
 
-        for file in os.listdir(date_path):
-            _, ext = os.path.splitext(file)
-            if not file.startswith("solution.") or ext not in EXT_TO_LANG:
-                continue
+        for file in date_dir.iterdir():
+            ext = file.suffix
+            if file.name.startswith("solution.") and ext in EXT_TO_LANG:
+                lang = EXT_TO_LANG[ext]
+                dest_dir = ROOT / lang
+                dest_dir.mkdir(exist_ok=True)
 
-            lang = EXT_TO_LANG[ext]
-            lang_folder = os.path.join(lang)
-            os.makedirs(lang_folder, exist_ok=True)
+                try:
+                    content = file.read_text(encoding="utf-8")
+                except Exception:
+                    continue
 
-            path = os.path.join(date_path, file)
+                match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content, re.I)
+                if not match:
+                    continue
 
-            # Extract problem ID + name from header
-            problem_id, problem_name = None, None
-            try:
-                with open(path, "r", encoding="utf-8") as f:
-                    content = f.read()
-            except Exception:
-                print(f"⚠️ Could not read {path}")
-                continue
+                pid = match.group(1).zfill(4)
+                name = match.group(2).lower().replace(" ", "_").replace("-", "_")
+                dest = dest_dir / f"{pid}_{name}{ext}"
 
-            match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content, re.IGNORECASE)
-            if match:
-                problem_id = match.group(1).zfill(4)  # normalize e.g. 326 -> 0326
-                problem_name = (
-                    match.group(2)
-                    .strip()
-                    .lower()
-                    .replace(" ", "_")
-                    .replace("-", "_")
-                )
+                shutil.copy(file, dest)
 
-            if not problem_id:
-                print(f"⚠️ Skipped {file} (could not extract problem ID)")
-                continue
-
-            dest_name = f"{problem_id}_{problem_name}{ext}" if problem_name else f"{problem_id}{ext}"
-            dest_path = os.path.join(lang_folder, dest_name)
-
-            shutil.copy(path, dest_path)  # always overwrite
-            print(f"✅ Synced {file} ({date_folder}) → {dest_path}")
-
-
-def get_solved_problems():
-    """Scan language folders and return solved problems dictionary."""
+def get_solved():
     solved = defaultdict(set)
 
     for lang in LANG_FOLDERS:
-        if not os.path.exists(lang):
+        lang_dir = ROOT / lang
+        if not lang_dir.exists():
             continue
 
-        for file in os.listdir(lang):
-            _, ext = os.path.splitext(file)
-            if ext in EXT_TO_LANG:
-                match = re.match(r"^(\d+)", file)
-                if match:
-                    problem_id = match.group(1).zfill(4)
-                    solved[problem_id].add(lang)
+        for f in lang_dir.iterdir():
+            if f.suffix in EXT_TO_LANG:
+                m = re.match(r"^(\d+)", f.name)
+                if m:
+                    solved[m.group(1).zfill(4)].add(lang)
 
     return solved
 
+def update_progress():
+    solved = get_solved()
+    active_langs = [l for l in LANG_FOLDERS if (ROOT / l).exists()]
 
-def update_progress_table(solved, active_langs):
-    """Generate progress table content and update README + PROGRESS.md."""
-    total_problems = len(solved)
     header = "| Problem | " + " | ".join(active_langs) + " |\n"
-    header += "|---------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
+    header += "|--------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
 
     rows = []
-    for problem in sorted(solved.keys()):
-        row = f"| {problem} "
+    for pid in sorted(solved):
+        row = f"| {pid} "
         for lang in active_langs:
-            row += "| ✅ " if lang in solved[problem] else "| ❌ "
+            row += "| ✅ " if lang in solved[pid] else "| ❌ "
         row += "|"
         rows.append(row)
 
     table = header + "\n".join(rows)
-    progress_md = f"# Progress Overview\n\n**Total Solved:** {total_problems}\n\n" + table
+    content = f"**Total Solved:** {len(solved)}\n\n" + table
 
-    # Update PROGRESS.md
-    with open(PROGRESS_FILE, "w", encoding="utf-8") as f:
-        f.write(progress_md)
+    PROGRESS_FILE.write_text(content, encoding="utf-8")
 
-    # Update README.md
-    if os.path.exists(README_FILE):
-        with open(README_FILE, "r", encoding="utf-8") as f:
-            content = f.read()
+    readme = README_FILE.read_text(encoding="utf-8")
+
+    start = "<!-- PROGRESS:START -->"
+    end = "<!-- PROGRESS:END -->"
+
+    if start in readme and end in readme:
+        before = readme.split(start)[0]
+        after = readme.split(end)[1]
+        readme = before + start + "\n\n" + content + "\n\n" + end + after
     else:
-        content = ""
+        readme += f"\n\n## 📊 Progress\n{start}\n\n{content}\n\n{end}\n"
 
-    marker = "<!-- PROGRESS_TABLE -->"
-    if marker in content:
-        before, _ = content.split(marker, 1)
-        new_content = before + marker + "\n\n" + progress_md
-    else:
-        new_content = content + "\n\n" + marker + "\n\n" + progress_md
+    README_FILE.write_text(readme, encoding="utf-8")
 
-    with open(README_FILE, "w", encoding="utf-8") as f:
-        f.write(new_content)
-
-
+# ---------- RUN ----------
 if __name__ == "__main__":
     sync_daily_challenges()
-    solved = get_solved_problems()
-    active_langs = [lang for lang in LANG_FOLDERS if os.path.exists(lang)]
-    update_progress_table(solved, active_langs)
+    update_progress()
