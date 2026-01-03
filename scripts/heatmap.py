@@ -3,40 +3,60 @@ import json
 from collections import defaultdict
 from datetime import datetime
 
-ROOT = Path(".")
+ROOT = Path(__file__).resolve().parents[1]
 DAILY = ROOT / "daily-challenges"
-ASSETS = ROOT / "assets"
-ASSETS.mkdir(exist_ok=True)
+README = ROOT / "README.md"
 
-OUTPUT = ASSETS / "heatmap.json"
+BLOCKS = ["⬜", "🟩", "🟨", "🟧", "🟥"]
 
-def collect_dates():
-    counts = defaultdict(int)
+def load_activity():
+    activity = defaultdict(int)
 
     for meta in DAILY.rglob("meta.json"):
         try:
             data = json.loads(meta.read_text(encoding="utf-8"))
             date = data.get("date")
             if date:
-                counts[date] += 1
+                activity[date] += 1
         except Exception:
-            continue
+            pass
 
-    return dict(sorted(counts.items()))
+    return activity
 
-def main():
-    data = collect_dates()
-    OUTPUT.write_text(
-        json.dumps(
-            {
-                "generated_at": datetime.utcnow().isoformat(),
-                "days": data,
-            },
-            indent=2,
-        ),
-        encoding="utf-8",
-    )
-    print(f"🔥 Heatmap generated: {OUTPUT} ({len(data)} active days)")
+def intensity(count):
+    if count == 0:
+        return BLOCKS[0]
+    elif count == 1:
+        return BLOCKS[1]
+    elif count == 2:
+        return BLOCKS[2]
+    elif count == 3:
+        return BLOCKS[3]
+    else:
+        return BLOCKS[4]
+
+def build_heatmap(activity):
+    lines = ["📅 **Daily Activity Heatmap**\n"]
+    for date in sorted(activity.keys()):
+        lines.append(f"{date} {intensity(activity[date])}")
+    return "\n".join(lines)
+
+def update_readme(content):
+    text = README.read_text(encoding="utf-8")
+
+    start = "<!-- HEATMAP:START -->"
+    end = "<!-- HEATMAP:END -->"
+
+    if start in text and end in text:
+        before = text.split(start)[0]
+        after = text.split(end)[1]
+        text = before + start + "\n\n" + content + "\n\n" + end + after
+    else:
+        text += f"\n\n{start}\n\n{content}\n\n{end}"
+
+    README.write_text(text, encoding="utf-8")
 
 if __name__ == "__main__":
-    main()
+    activity = load_activity()
+    heatmap = build_heatmap(activity)
+    update_readme(heatmap)
