@@ -151,43 +151,6 @@ This keeps the Git history clean and meaningful.
 <!-- HEATMAP:END -->
 
 <!-- PROGRESS_TABLE:START -->
-<!-- PROGRESS_TABLE:END -->
-
-
----
-## 🌍 Designed for the Future
-
-This repository is **language-agnostic by design**.
-
-- Adding a new language requires **no restructuring**
-- Progress tables adapt automatically
-- Scripts detect languages dynamically
-
-Planned additions:
-- 🦀 Rust
-- 🐹 Go
-- 🌐 JavaScript / TypeScript
-- …and more
-
----
-
-## 🌟 Long-Term Goals
-
-- 📊 Rich progress analytics
-- 🏷 Difficulty & topic tracking
-- 🤖 Zero manual maintenance
-- ✨ Clean, readable, recruiter-friendly codebase
-
----
-
-## 💬 A Note to Myself (and You)
-
-> **“One problem a day seems small — until a year passes.”**
-
-Let’s keep building, learning, and growing 🌱💻
-
----
-
 
 ## 📊 Progress
 <!-- PROGRESS:START -->
@@ -247,3 +210,40 @@ Let’s keep building, learning, and growing 🌱💻
 | 3541 | ✅ | ✅ | ✅ |
 
 <!-- PROGRESS:END -->
+<!-- PROGRESS_TABLE:END -->
+
+
+---
+## 🌍 Designed for the Future
+
+This repository is **language-agnostic by design**.
+
+- Adding a new language requires **no restructuring**
+- Progress tables adapt automatically
+- Scripts detect languages dynamically
+
+Planned additions:
+- 🦀 Rust
+- 🐹 Go
+- 🌐 JavaScript / TypeScript
+- …and more
+
+---
+
+## 🌟 Long-Term Goals
+
+- 📊 Rich progress analytics
+- 🏷 Difficulty & topic tracking
+- 🤖 Zero manual maintenance
+- ✨ Clean, readable, recruiter-friendly codebase
+
+---
+
+## 💬 A Note to Myself (and You)
+
+> **“One problem a day seems small — until a year passes.”**
+
+Let’s keep building, learning, and growing 🌱💻
+
+---
+
