@@ -80,6 +80,25 @@ This keeps the Git history clean and meaningful.
 
 ---
 
+## 🔥 Daily Streak
+
+<!-- STREAK:START -->
+⏳ Calculating streak...
+<!-- STREAK:END -->
+
+
+## 📅 Activity Heatmap
+
+
+<!-- HEATMAP:START -->
+⏳ Generating heatmap...
+<!-- HEATMAP:END -->
+
+<!-- PROGRESS_TABLE:START -->
+<!-- PROGRESS_TABLE:END -->
+
+
+---
 ## 🌍 Designed for the Future
 
 This repository is **language-agnostic by design**.
@@ -112,16 +131,3 @@ Planned additions:
 Let’s keep building, learning, and growing 🌱💻
 
 ---
-
-
-
-
-
-<!-- PROGRESS_TABLE -->
-
-# Progress Overview
-
-**Total Solved:** 0
-
-| Problem |  |
-|---------||
