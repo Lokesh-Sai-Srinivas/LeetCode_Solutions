@@ -2,24 +2,19 @@ from pathlib import Path
 import json
 from datetime import datetime, timedelta
 
-ROOT = Path(".")
+ROOT = Path(__file__).resolve().parents[1]
 DAILY = ROOT / "daily-challenges"
-ASSETS = ROOT / "assets"
-ASSETS.mkdir(exist_ok=True)
+README = ROOT / "README.md"
 
-OUTPUT = ASSETS / "streak.json"
-
-def get_dates():
+def collect_dates():
     dates = set()
-
     for meta in DAILY.rglob("meta.json"):
         try:
             data = json.loads(meta.read_text(encoding="utf-8"))
             if "date" in data:
                 dates.add(datetime.strptime(data["date"], "%Y-%m-%d").date())
         except Exception:
-            continue
-
+            pass
     return sorted(dates)
 
 def compute_streaks(dates):
@@ -28,43 +23,46 @@ def compute_streaks(dates):
 
     longest = 1
     current = 1
-    temp = 1
+    today = dates[-1]
 
+    streak = 1
     for i in range(1, len(dates)):
-        if dates[i] == dates[i - 1] + timedelta(days=1):
-            temp += 1
-            longest = max(longest, temp)
+        if dates[i] == dates[i-1] + timedelta(days=1):
+            streak += 1
+            longest = max(longest, streak)
         else:
-            temp = 1
+            streak = 1
 
-    today = datetime.utcnow().date()
-    current = 0
-    for d in reversed(dates):
-        if d == today or d == today - timedelta(days=current):
-            current += 1
-        else:
-            break
+    # current streak (ending today or yesterday)
+    if today >= datetime.today().date() - timedelta(days=1):
+        current = streak
+    else:
+        current = 0
 
     return current, longest
 
-def main():
-    dates = get_dates()
-    current, longest = compute_streaks(dates)
+def update_readme(current, longest):
+    content = f"""
+🔥 **Daily Streak**
+- 🔥 Current streak: **{current} days**
+- 🏆 Longest streak: **{longest} days**
+""".strip()
 
-    OUTPUT.write_text(
-        json.dumps(
-            {
-                "current_streak": current,
-                "longest_streak": longest,
-                "total_active_days": len(dates),
-                "updated_at": datetime.utcnow().isoformat(),
-            },
-            indent=2,
-        ),
-        encoding="utf-8",
-    )
+    text = README.read_text(encoding="utf-8")
 
-    print(f"🔥 Streak updated → current: {current}, longest: {longest}")
+    start = "<!-- STREAK:START -->"
+    end = "<!-- STREAK:END -->"
+
+    if start in text and end in text:
+        before = text.split(start)[0]
+        after = text.split(end)[1]
+        text = before + start + "\n\n" + content + "\n\n" + end + after
+    else:
+        text += f"\n\n{start}\n\n{content}\n\n{end}"
+
+    README.write_text(text, encoding="utf-8")
 
 if __name__ == "__main__":
-    main()
+    dates = collect_dates()
+    current, longest = compute_streaks(dates)
+    update_readme(current, longest)
