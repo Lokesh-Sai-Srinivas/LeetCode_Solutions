@@ -1,3 +1,4 @@
+import os
 import re
 import shutil
 from pathlib import Path
@@ -8,13 +9,9 @@ ROOT = Path(__file__).resolve().parents[1]
 README_FILE = ROOT / "README.md"
 PROGRESS_FILE = ROOT / "PROGRESS.md"
 DAILY_FOLDER = ROOT / "daily-challenges"
+LANG_ROOT = ROOT / "solutions-by-language"
 
 # ---------- CONFIG ----------
-LANG_FOLDERS = [
-    "python", "cpp", "java", "golang", "javascript", "csharp",
-    "ruby", "swift", "kotlin", "typescript", "rust", "scala", "php",
-]
-
 EXT_TO_LANG = {
     ".py": "python",
     ".cpp": "cpp",
@@ -36,54 +33,60 @@ def sync_daily_challenges():
     if not DAILY_FOLDER.exists():
         return
 
-    for date_dir in DAILY_FOLDER.iterdir():
-        if not date_dir.is_dir():
-            continue
+    for day in DAILY_FOLDER.rglob("solutions"):
+        for file in day.iterdir():
+            if not file.name.startswith("solution."):
+                continue
 
-        for file in date_dir.iterdir():
             ext = file.suffix
-            if file.name.startswith("solution.") and ext in EXT_TO_LANG:
-                lang = EXT_TO_LANG[ext]
-                dest_dir = ROOT / lang
-                dest_dir.mkdir(exist_ok=True)
+            if ext not in EXT_TO_LANG:
+                continue
 
-                try:
-                    content = file.read_text(encoding="utf-8")
-                except Exception:
-                    continue
+            lang = EXT_TO_LANG[ext]
+            dest_dir = LANG_ROOT / lang
+            dest_dir.mkdir(parents=True, exist_ok=True)
 
-                match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content, re.I)
-                if not match:
-                    continue
+            try:
+                content = file.read_text(encoding="utf-8")
+            except Exception:
+                continue
 
-                pid = match.group(1).zfill(4)
-                name = match.group(2).lower().replace(" ", "_").replace("-", "_")
-                dest = dest_dir / f"{pid}_{name}{ext}"
+            match = re.search(r"Problem:\s*(\d+)\s*-\s*(.+)", content, re.I)
+            if not match:
+                continue
 
-                shutil.copy(file, dest)
+            pid = match.group(1).zfill(4)
+            name = match.group(2).lower().replace(" ", "_").replace("-", "_")
+            dest = dest_dir / f"{pid}_{name}{ext}"
+
+            shutil.copy(file, dest)
+
 
 def get_solved():
     solved = defaultdict(set)
 
-    for lang in LANG_FOLDERS:
-        lang_dir = ROOT / lang
-        if not lang_dir.exists():
+    if not LANG_ROOT.exists():
+        return solved
+
+    for lang_dir in LANG_ROOT.iterdir():
+        if not lang_dir.is_dir():
             continue
 
+        lang = lang_dir.name
         for f in lang_dir.iterdir():
-            if f.suffix in EXT_TO_LANG:
-                m = re.match(r"^(\d+)", f.name)
-                if m:
-                    solved[m.group(1).zfill(4)].add(lang)
+            m = re.match(r"^(\d+)", f.name)
+            if m:
+                solved[m.group(1).zfill(4)].add(lang)
 
     return solved
 
+
 def update_progress():
     solved = get_solved()
-    active_langs = [l for l in LANG_FOLDERS if (ROOT / l).exists()]
+    active_langs = sorted({lang for langs in solved.values() for lang in langs})
 
     header = "| Problem | " + " | ".join(active_langs) + " |\n"
-    header += "|--------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
+    header += "|---------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
 
     rows = []
     for pid in sorted(solved):
@@ -111,6 +114,7 @@ def update_progress():
         readme += f"\n\n## 📊 Progress\n{start}\n\n{content}\n\n{end}\n"
 
     README_FILE.write_text(readme, encoding="utf-8")
+
 
 # ---------- RUN ----------
 if __name__ == "__main__":
