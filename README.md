@@ -131,3 +131,15 @@ Planned additions:
 Let’s keep building, learning, and growing 🌱💻
 
 ---
+
+
+## 📊 Progress
+<!-- PROGRESS:START -->
+
+**Total Solved:** 0
+
+| Problem |  |
+|--------||
+
+
+<!-- PROGRESS:END -->
