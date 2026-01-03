@@ -99,6 +99,7 @@ This keeps the Git history clean and meaningful.
 📅 **Activity Heatmap (Last 90 Days)**
 
 Mon Tue Wed Thu Fri Sat Sun
+🟩  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜
 ⬜  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜
 ⬜  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜
 ⬜  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜
@@ -111,7 +112,6 @@ Mon Tue Wed Thu Fri Sat Sun
 ⬜  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜
 ⬜  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜
 ⬜  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜
-⬜  ⬜  ⬜  🟩  🟩  🟩  ⬜
 
 <!-- HEATMAP:END -->
 
