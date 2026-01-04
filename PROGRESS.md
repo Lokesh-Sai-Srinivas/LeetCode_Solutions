@@ -1,53 +1,54 @@
-**Total Solved:** 49
+**Total Solved:** 50
 
-| Problem | cpp | java | python |
-|---------|:---:|:---:|:---:|
-| 0001 | ✅ | ✅ | ✅ |
-| 0036 | ✅ | ✅ | ✅ |
-| 0037 | ✅ | ✅ | ✅ |
-| 0066 | ✅ | ✅ | ✅ |
-| 0120 | ✅ | ✅ | ✅ |
-| 0165 | ✅ | ✅ | ✅ |
-| 0166 | ✅ | ✅ | ✅ |
-| 0342 | ✅ | ✅ | ✅ |
-| 0498 | ✅ | ✅ | ✅ |
-| 0611 | ✅ | ✅ | ✅ |
-| 0679 | ✅ | ✅ | ✅ |
-| 0837 | ✅ | ✅ | ✅ |
-| 0961 | ✅ | ✅ | ✅ |
-| 0966 | ✅ | ✅ | ✅ |
-| 1039 | ✅ | ✅ | ✅ |
-| 1277 | ✅ | ✅ | ✅ |
-| 1304 | ✅ | ✅ | ✅ |
-| 1317 | ✅ | ✅ | ✅ |
-| 1323 | ✅ | ✅ | ✅ |
-| 1411 | ✅ | ✅ | ✅ |
-| 1493 | ✅ | ✅ | ✅ |
-| 1504 | ✅ | ✅ | ✅ |
-| 1733 | ✅ | ✅ | ✅ |
-| 1792 | ✅ | ✅ | ✅ |
-| 1912 | ✅ | ✅ | ✅ |
-| 1935 | ✅ | ✅ | ✅ |
-| 2197 | ✅ | ✅ | ✅ |
-| 2264 | ✅ | ✅ | ✅ |
-| 2327 | ✅ | ✅ | ✅ |
-| 2345 | ✅ | ✅ | ✅ |
-| 2348 | ✅ | ✅ | ✅ |
-| 2749 | ✅ | ✅ | ✅ |
-| 2785 | ✅ | ✅ | ✅ |
-| 3000 | ✅ | ✅ | ✅ |
-| 3005 | ✅ | ✅ | ✅ |
-| 3021 | ✅ | ✅ | ✅ |
-| 3025 | ✅ | ✅ | ✅ |
-| 3027 | ✅ | ✅ | ✅ |
-| 3195 | ✅ | ✅ | ✅ |
-| 3197 | ✅ | ✅ | ✅ |
-| 3227 | ✅ | ✅ | ✅ |
-| 3408 | ✅ | ✅ | ✅ |
-| 3446 | ✅ | ✅ | ✅ |
-| 3459 | ✅ | ✅ | ✅ |
-| 3484 | ✅ | ✅ | ✅ |
-| 3495 | ✅ | ✅ | ✅ |
-| 3508 | ✅ | ✅ | ✅ |
-| 3516 | ✅ | ✅ | ✅ |
-| 3541 | ✅ | ✅ | ✅ |
+| Problem | Link | cpp | java | python |
+|---------|------|:---:|:---:|:---:|
+| 0001 | [🔗](https://leetcode.com/problems/two-sum/) | ✅ | ✅ | ✅ |
+| 0036 | [🔗](https://leetcode.com/problems/valid-sudoku/) | ✅ | ✅ | ✅ |
+| 0037 | [🔗](https://leetcode.com/problems/sudoku-solver/) | ✅ | ✅ | ✅ |
+| 0066 | [🔗](https://leetcode.com/problems/plus-one/description/1872710729/?envType=daily-question&envId=2026-01-02) | ✅ | ✅ | ✅ |
+| 0120 | [🔗](https://leetcode.com/problems/triangle/) | ✅ | ✅ | ✅ |
+| 0165 | [🔗](https://leetcode.com/problems/compare-version-numbers/) | ✅ | ✅ | ✅ |
+| 0166 | [🔗](https://leetcode.com/problems/fraction-to-recurring-decimal/) | ✅ | ✅ | ✅ |
+| 0342 | [🔗](https://leetcode.com/problems/power-of-four/) | ✅ | ✅ | ✅ |
+| 0498 | [🔗](https://leetcode.com/problems/diagonal-traverse/) | ✅ | ✅ | ✅ |
+| 0611 | [🔗](https://leetcode.com/problems/valid-triangle-number/) | ✅ | ✅ | ✅ |
+| 0679 | [🔗](https://leetcode.com/problems/24-game/) | ✅ | ✅ | ✅ |
+| 0837 | [🔗](https://leetcode.com/problems/new-21-game/) | ✅ | ✅ | ✅ |
+| 0961 | [🔗](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/description/?envType=daily-question&envId=2026-01-02) | ✅ | ✅ | ✅ |
+| 0966 | [🔗](https://leetcode.com/problems/vowel-spellchecker/) | ✅ | ✅ | ✅ |
+| 1039 | [🔗](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/) | ✅ | ✅ | ✅ |
+| 1277 | [🔗](https://leetcode.com/problems/count-square-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
+| 1304 | [🔗](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/) | ✅ | ✅ | ✅ |
+| 1317 | [🔗](https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers/) | ✅ | ✅ | ✅ |
+| 1323 | [🔗](https://leetcode.com/problems/maximum-69-number/) | ✅ | ✅ | ✅ |
+| 1390 | [🔗](https://leetcode.com/problems/four-divisors/description/?envType=daily-question&envId=2026-01-04) | ✅ | ✅ | ✅ |
+| 1411 | [🔗](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid/description/?envType=daily-question&envId=2026-01-03) | ✅ | ✅ | ✅ |
+| 1493 | [🔗](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | ✅ | ✅ | ✅ |
+| 1504 | [🔗](https://leetcode.com/problems/count-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
+| 1733 | [🔗](https://leetcode.com/problems/minimum-number-of-people-to-teach/) | ✅ | ✅ | ✅ |
+| 1792 | [🔗](https://leetcode.com/problems/maximum-average-pass-ratio/) | ✅ | ✅ | ✅ |
+| 1912 | [🔗](https://leetcode.com/problems/design-movie-rental-system/) | ✅ | ✅ | ✅ |
+| 1935 | [🔗](https://leetcode.com/problems/maximum-number-of-words-you-can-type/) | ✅ | ✅ | ✅ |
+| 2197 | [🔗](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) | ✅ | ✅ | ✅ |
+| 2264 | [🔗](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | ✅ | ✅ | ✅ |
+| 2327 | [🔗](https://leetcode.com/problems/number-of-people-aware-of-a-secret/) | ✅ | ✅ | ✅ |
+| 2345 | [🔗](https://leetcode.com/problems/design-a-food-rating-system/) | ✅ | ✅ | ✅ |
+| 2348 | [🔗](https://leetcode.com/problems/number-of-zero-filled-subarrays/) | ✅ | ✅ | ✅ |
+| 2749 | [🔗](https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/) | ✅ | ✅ | ✅ |
+| 2785 | [🔗](https://leetcode.com/problems/sort-vowels-in-a-string/) | ✅ | ✅ | ✅ |
+| 3000 | [🔗](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/) | ✅ | ✅ | ✅ |
+| 3005 | [🔗](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | ✅ | ✅ | ✅ |
+| 3021 | [🔗](https://leetcode.com/problems/alice-and-bob-playing-flower-game/) | ✅ | ✅ | ✅ |
+| 3025 | [🔗](https://leetcode.com/problems/find-the-number-of-ways-to-place-people-i/) | ✅ | ✅ | ✅ |
+| 3027 | [🔗](https://leetcode.com/problems/find-the-number-of-ways-to-place-people-ii/) | ✅ | ✅ | ✅ |
+| 3195 | [🔗](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-i/) | ✅ | ✅ | ✅ |
+| 3197 | [🔗](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-ii/) | ✅ | ✅ | ✅ |
+| 3227 | [🔗](https://leetcode.com/problems/vowels-game-in-a-string/) | ✅ | ✅ | ✅ |
+| 3408 | [🔗](https://leetcode.com/problems/design-task-manager/) | ✅ | ✅ | ✅ |
+| 3446 | [🔗](https://leetcode.com/problems/sort-matrix-by-diagonals/) | ✅ | ✅ | ✅ |
+| 3459 | [🔗](https://leetcode.com/problems/length-of-longest-v-shaped-diagonal-segment/) | ✅ | ✅ | ✅ |
+| 3484 | [🔗](https://leetcode.com/problems/design-spreadsheet/) | ✅ | ✅ | ✅ |
+| 3495 | [🔗](https://leetcode.com/problems/minimum-operations-to-make-array-elements-zero/) | ✅ | ✅ | ✅ |
+| 3508 | [🔗](https://leetcode.com/problems/implement-router/) | ✅ | ✅ | ✅ |
+| 3516 | [🔗](https://leetcode.com/problems/find-closest-person/) | ✅ | ✅ | ✅ |
+| 3541 | [🔗](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/) | ✅ | ✅ | ✅ |

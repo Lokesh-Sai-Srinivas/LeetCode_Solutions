@@ -1,0 +1,17 @@
+{
+  "problem_id": 1390,
+  "title": "Four Divisors",
+  "slug": "four-divisors",
+  "difficulty": "Medium",
+  "date": "2026-01-04",
+  "url": "https://leetcode.com/problems/four-divisors/description/?envType=daily-question&envId=2026-01-04",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
