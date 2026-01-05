@@ -1,0 +1,18 @@
+{
+  "problem_id": 1975,
+  "title": "Maximum Matrix Sum",
+  "slug": "maximum-matrix-sum",
+  "difficulty": "Medium",
+  "date": "2026-01-05",
+  "url": "https://leetcode.com/problems/maximum-matrix-sum/description/?envType=daily-question&envId=2026-01-05",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Matrix"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}

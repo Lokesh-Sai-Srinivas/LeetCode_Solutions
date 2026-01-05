@@ -1,4 +1,4 @@
-**Total Solved:** 50
+**Total Solved:** 51
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -29,6 +29,7 @@
 | 1792 | [🔗](https://leetcode.com/problems/maximum-average-pass-ratio/) | ✅ | ✅ | ✅ |
 | 1912 | [🔗](https://leetcode.com/problems/design-movie-rental-system/) | ✅ | ✅ | ✅ |
 | 1935 | [🔗](https://leetcode.com/problems/maximum-number-of-words-you-can-type/) | ✅ | ✅ | ✅ |
+| 1975 | [🔗](https://leetcode.com/problems/maximum-matrix-sum/description/?envType=daily-question&envId=2026-01-05) | ✅ | ✅ | ✅ |
 | 2197 | [🔗](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) | ✅ | ✅ | ✅ |
 | 2264 | [🔗](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | ✅ | ✅ | ✅ |
 | 2327 | [🔗](https://leetcode.com/problems/number-of-people-aware-of-a-secret/) | ✅ | ✅ | ✅ |

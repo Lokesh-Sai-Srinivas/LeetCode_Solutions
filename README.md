@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **4 days**
+- 🔥 Current streak: **5 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 50
+**Total Solved:** 51
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -127,6 +127,7 @@ This keeps the Git history clean and meaningful.
 | 1792 | [🔗](https://leetcode.com/problems/maximum-average-pass-ratio/) | ✅ | ✅ | ✅ |
 | 1912 | [🔗](https://leetcode.com/problems/design-movie-rental-system/) | ✅ | ✅ | ✅ |
 | 1935 | [🔗](https://leetcode.com/problems/maximum-number-of-words-you-can-type/) | ✅ | ✅ | ✅ |
+| 1975 | [🔗](https://leetcode.com/problems/maximum-matrix-sum/description/?envType=daily-question&envId=2026-01-05) | ✅ | ✅ | ✅ |
 | 2197 | [🔗](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) | ✅ | ✅ | ✅ |
 | 2264 | [🔗](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | ✅ | ✅ | ✅ |
 | 2327 | [🔗](https://leetcode.com/problems/number-of-people-aware-of-a-secret/) | ✅ | ✅ | ✅ |
@@ -191,11 +192,13 @@ Let’s keep building, learning, and growing 🌱💻
 
 
 
+
+
 <!-- PROGRESS_TABLE -->
 
 # Progress Overview
 
-**Total Solved:** 50
+**Total Solved:** 51
 
 | Problem | cpp | java | python |
 |---------|:---:|:---:|:---:|
@@ -226,6 +229,7 @@ Let’s keep building, learning, and growing 🌱💻
 | [1792](https://leetcode.com/problems/maximum-average-pass-ratio/) | ✅ | ✅ | ✅ |
 | [1912](https://leetcode.com/problems/design-movie-rental-system/) | ✅ | ✅ | ✅ |
 | [1935](https://leetcode.com/problems/maximum-number-of-words-you-can-type/) | ✅ | ✅ | ✅ |
+| [1975](https://leetcode.com/problems/maximum-matrix-sum/description/?envType=daily-question&envId=2026-01-05) | ✅ | ✅ | ✅ |
 | [2197](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) | ✅ | ✅ | ✅ |
 | [2264](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | ✅ | ✅ | ✅ |
 | [2327](https://leetcode.com/problems/number-of-people-aware-of-a-secret/) | ✅ | ✅ | ✅ |
