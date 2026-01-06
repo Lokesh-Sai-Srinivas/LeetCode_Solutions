@@ -1,0 +1,19 @@
+{
+  "problem_id": 1161,
+  "title": "Maximum Level Sum of a Binary Tree",
+  "slug": "maximum-level-sum-of-a-binary-tree",
+  "difficulty": "Medium",
+  "date": "2026-01-06",
+  "url": "https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/?envType=daily-question&envId=2026-01-06",
+  "topics": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}

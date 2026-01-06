@@ -1,4 +1,4 @@
-**Total Solved:** 51
+**Total Solved:** 52
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -17,6 +17,7 @@
 | 0961 | [🔗](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/description/?envType=daily-question&envId=2026-01-02) | ✅ | ✅ | ✅ |
 | 0966 | [🔗](https://leetcode.com/problems/vowel-spellchecker/) | ✅ | ✅ | ✅ |
 | 1039 | [🔗](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/) | ✅ | ✅ | ✅ |
+| 1161 | [🔗](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/?envType=daily-question&envId=2026-01-06) | ✅ | ✅ | ✅ |
 | 1277 | [🔗](https://leetcode.com/problems/count-square-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
 | 1304 | [🔗](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/) | ✅ | ✅ | ✅ |
 | 1317 | [🔗](https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers/) | ✅ | ✅ | ✅ |
