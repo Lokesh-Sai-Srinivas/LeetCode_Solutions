@@ -249,7 +249,7 @@ def ingest():
     
     # Write the updated meta back
     meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding='utf-8')
-    update_progress()
+    # update_progress()
 
     # Clean up the incoming directory
     def cleanup_incoming():
