@@ -22,4 +22,4 @@ class Solution:
         for s in sums:
             max_prod = max(max_prod, s * (total_sum - s))
 
-        return max_prod % self.MOD    
+        return max_prod % self.MOD
