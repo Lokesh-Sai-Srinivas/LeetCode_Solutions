@@ -1,0 +1,17 @@
+{
+  "problem_id": 1458,
+  "title": "Max Dot Product of Two Subsequences",
+  "slug": "max-dot-product-of-two-subsequences",
+  "difficulty": "Hard",
+  "date": "2026-01-08",
+  "url": "https://leetcode.com/problems/max-dot-product-of-two-subsequences/description/?envType=daily-question&envId=2026-01-08",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}

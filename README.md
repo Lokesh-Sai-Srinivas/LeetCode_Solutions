@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **7 days**
+- 🔥 Current streak: **8 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 53
+**Total Solved:** 54
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -123,6 +123,7 @@ This keeps the Git history clean and meaningful.
 | 1339 | [🔗](https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/description/?envType=daily-question&envId=2026-01-07) | ✅ | ✅ | ✅ |
 | 1390 | [🔗](https://leetcode.com/problems/four-divisors/description/?envType=daily-question&envId=2026-01-04) | ✅ | ✅ | ✅ |
 | 1411 | [🔗](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid/description/?envType=daily-question&envId=2026-01-03) | ✅ | ✅ | ✅ |
+| 1458 | [🔗](https://leetcode.com/problems/max-dot-product-of-two-subsequences/description/?envType=daily-question&envId=2026-01-08) | ✅ | ✅ | ✅ |
 | 1493 | [🔗](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | ✅ | ✅ | ✅ |
 | 1504 | [🔗](https://leetcode.com/problems/count-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
 | 1733 | [🔗](https://leetcode.com/problems/minimum-number-of-people-to-teach/) | ✅ | ✅ | ✅ |

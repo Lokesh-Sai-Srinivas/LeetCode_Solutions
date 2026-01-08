@@ -15,4 +15,3 @@ class Solution:
                 dp[i][j] = max(pair, skip1, skip2)
 
         return dp[0][0]
-        
