@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **8 days**
+- 🔥 Current streak: **9 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 54
+**Total Solved:** 55
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -112,6 +112,7 @@ This keeps the Git history clean and meaningful.
 | 0611 | [🔗](https://leetcode.com/problems/valid-triangle-number/) | ✅ | ✅ | ✅ |
 | 0679 | [🔗](https://leetcode.com/problems/24-game/) | ✅ | ✅ | ✅ |
 | 0837 | [🔗](https://leetcode.com/problems/new-21-game/) | ✅ | ✅ | ✅ |
+| 0865 | [🔗](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/?envType=daily-question&envId=2026-01-09) | ✅ | ✅ | ✅ |
 | 0961 | [🔗](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/description/?envType=daily-question&envId=2026-01-02) | ✅ | ✅ | ✅ |
 | 0966 | [🔗](https://leetcode.com/problems/vowel-spellchecker/) | ✅ | ✅ | ✅ |
 | 1039 | [🔗](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/) | ✅ | ✅ | ✅ |

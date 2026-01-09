@@ -1,0 +1,20 @@
+{
+  "problem_id": 865,
+  "title": "Smallest Subtree with all the Deepest Nodes",
+  "slug": "smallest-subtree-with-all-the-deepest-nodes",
+  "difficulty": "Medium",
+  "date": "2026-01-09",
+  "url": "https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/?envType=daily-question&envId=2026-01-09",
+  "topics": [
+    "Hash Table",
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
