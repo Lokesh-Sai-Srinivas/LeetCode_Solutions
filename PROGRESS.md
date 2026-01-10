@@ -1,4 +1,4 @@
-**Total Solved:** 55
+**Total Solved:** 56
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -13,6 +13,7 @@
 | 0498 | [🔗](https://leetcode.com/problems/diagonal-traverse/) | ✅ | ✅ | ✅ |
 | 0611 | [🔗](https://leetcode.com/problems/valid-triangle-number/) | ✅ | ✅ | ✅ |
 | 0679 | [🔗](https://leetcode.com/problems/24-game/) | ✅ | ✅ | ✅ |
+| 0712 | [🔗](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/?envType=daily-question&envId=2026-01-10) | ✅ | ✅ | ✅ |
 | 0837 | [🔗](https://leetcode.com/problems/new-21-game/) | ✅ | ✅ | ✅ |
 | 0865 | [🔗](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/?envType=daily-question&envId=2026-01-09) | ✅ | ✅ | ✅ |
 | 0961 | [🔗](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/description/?envType=daily-question&envId=2026-01-02) | ✅ | ✅ | ✅ |
