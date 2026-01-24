@@ -1,4 +1,4 @@
-**Total Solved:** 63
+**Total Solved:** 64
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -34,6 +34,7 @@
 | 1504 | [🔗](https://leetcode.com/problems/count-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
 | 1733 | [🔗](https://leetcode.com/problems/minimum-number-of-people-to-teach/) | ✅ | ✅ | ✅ |
 | 1792 | [🔗](https://leetcode.com/problems/maximum-average-pass-ratio/) | ✅ | ✅ | ✅ |
+| 1895 | [🔗](https://leetcode.com/problems/largest-magic-square/?envType=daily-question&envId=2026-01-18) | ❌ | ✅ | ❌ |
 | 1912 | [🔗](https://leetcode.com/problems/design-movie-rental-system/) | ✅ | ✅ | ✅ |
 | 1935 | [🔗](https://leetcode.com/problems/maximum-number-of-words-you-can-type/) | ✅ | ✅ | ✅ |
 | 1975 | [🔗](https://leetcode.com/problems/maximum-matrix-sum/description/?envType=daily-question&envId=2026-01-05) | ✅ | ✅ | ✅ |

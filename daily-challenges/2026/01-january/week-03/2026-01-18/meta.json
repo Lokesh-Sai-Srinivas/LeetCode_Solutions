@@ -1,0 +1,16 @@
+{
+  "problem_id": 1895,
+  "title": "Largest Magic Square",
+  "slug": "largest-magic-square",
+  "difficulty": "Medium",
+  "date": "2026-01-18",
+  "url": "https://leetcode.com/problems/largest-magic-square/?envType=daily-question&envId=2026-01-18",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
