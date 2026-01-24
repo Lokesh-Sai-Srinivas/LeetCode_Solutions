@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 65
+**Total Solved:** 66
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -155,6 +155,7 @@ This keeps the Git history clean and meaningful.
 | 3195 | [🔗](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-i/) | ✅ | ✅ | ✅ |
 | 3197 | [🔗](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-ii/) | ✅ | ✅ | ✅ |
 | 3227 | [🔗](https://leetcode.com/problems/vowels-game-in-a-string/) | ✅ | ✅ | ✅ |
+| 3314 | [🔗](https://leetcode.com/problems/construct-the-minimum-bitwise-array-i/?envType=daily-question&envId=2026-01-20) | ❌ | ✅ | ❌ |
 | 3408 | [🔗](https://leetcode.com/problems/design-task-manager/) | ✅ | ✅ | ✅ |
 | 3446 | [🔗](https://leetcode.com/problems/sort-matrix-by-diagonals/) | ✅ | ✅ | ✅ |
 | 3453 | [🔗](https://leetcode.com/problems/separate-squares-i/description/?envType=daily-question&envId=2026-01-13) | ✅ | ✅ | ✅ |
