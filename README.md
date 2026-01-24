@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **0 days**
+- 🔥 Current streak: **23 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 68
+**Total Solved:** 69
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -166,6 +166,7 @@ This keeps the Git history clean and meaningful.
 | 3495 | [🔗](https://leetcode.com/problems/minimum-operations-to-make-array-elements-zero/) | ✅ | ✅ | ✅ |
 | 3507 | [🔗](https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i/?envType=daily-question&envId=2026-01-22) | ❌ | ✅ | ❌ |
 | 3508 | [🔗](https://leetcode.com/problems/implement-router/) | ✅ | ✅ | ✅ |
+| 3510 | [🔗](https://leetcode.com/problems/minimum-pair-removal-to-sort-array-ii/?envType=daily-question&envId=2026-01-23) | ❌ | ✅ | ❌ |
 | 3516 | [🔗](https://leetcode.com/problems/find-closest-person/) | ✅ | ✅ | ✅ |
 | 3541 | [🔗](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/) | ✅ | ✅ | ✅ |
 

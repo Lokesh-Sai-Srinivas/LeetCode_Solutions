@@ -1,4 +1,4 @@
-**Total Solved:** 68
+**Total Solved:** 69
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -68,5 +68,6 @@
 | 3495 | [🔗](https://leetcode.com/problems/minimum-operations-to-make-array-elements-zero/) | ✅ | ✅ | ✅ |
 | 3507 | [🔗](https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i/?envType=daily-question&envId=2026-01-22) | ❌ | ✅ | ❌ |
 | 3508 | [🔗](https://leetcode.com/problems/implement-router/) | ✅ | ✅ | ✅ |
+| 3510 | [🔗](https://leetcode.com/problems/minimum-pair-removal-to-sort-array-ii/?envType=daily-question&envId=2026-01-23) | ❌ | ✅ | ❌ |
 | 3516 | [🔗](https://leetcode.com/problems/find-closest-person/) | ✅ | ✅ | ✅ |
 | 3541 | [🔗](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/) | ✅ | ✅ | ✅ |
