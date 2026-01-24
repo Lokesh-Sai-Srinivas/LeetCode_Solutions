@@ -133,7 +133,7 @@ This keeps the Git history clean and meaningful.
 | 1504 | [🔗](https://leetcode.com/problems/count-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
 | 1733 | [🔗](https://leetcode.com/problems/minimum-number-of-people-to-teach/) | ✅ | ✅ | ✅ |
 | 1792 | [🔗](https://leetcode.com/problems/maximum-average-pass-ratio/) | ✅ | ✅ | ✅ |
-| 1877 | [🔗](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/?envType=daily-question&envId=2026-01-24) | ❌ | ✅ | ❌ |
+| 1877 | [🔗](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/?envType=daily-question&envId=2026-01-24) | ✅ | ✅ | ✅ |
 | 1895 | [🔗](https://leetcode.com/problems/largest-magic-square/?envType=daily-question&envId=2026-01-18) | ❌ | ✅ | ❌ |
 | 1912 | [🔗](https://leetcode.com/problems/design-movie-rental-system/) | ✅ | ✅ | ✅ |
 | 1935 | [🔗](https://leetcode.com/problems/maximum-number-of-words-you-can-type/) | ✅ | ✅ | ✅ |

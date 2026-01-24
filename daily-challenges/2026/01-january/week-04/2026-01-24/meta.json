@@ -12,6 +12,8 @@
     "Sorting"
   ],
   "solutions": {
-    "java": "java.java"
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
   }
 }
