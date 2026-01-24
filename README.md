@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 59
+**Total Solved:** 60
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -153,6 +153,7 @@ This keeps the Git history clean and meaningful.
 | 3408 | [🔗](https://leetcode.com/problems/design-task-manager/) | ✅ | ✅ | ✅ |
 | 3446 | [🔗](https://leetcode.com/problems/sort-matrix-by-diagonals/) | ✅ | ✅ | ✅ |
 | 3453 | [🔗](https://leetcode.com/problems/separate-squares-i/description/?envType=daily-question&envId=2026-01-13) | ✅ | ✅ | ✅ |
+| 3454 | [🔗](https://leetcode.com/problems/separate-squares-ii/description/?envType=daily-question&envId=2026-01-14) | ❌ | ✅ | ❌ |
 | 3459 | [🔗](https://leetcode.com/problems/length-of-longest-v-shaped-diagonal-segment/) | ✅ | ✅ | ✅ |
 | 3484 | [🔗](https://leetcode.com/problems/design-spreadsheet/) | ✅ | ✅ | ✅ |
 | 3495 | [🔗](https://leetcode.com/problems/minimum-operations-to-make-array-elements-zero/) | ✅ | ✅ | ✅ |

@@ -1,0 +1,17 @@
+{
+  "problem_id": 3454,
+  "title": "Separate Squares II",
+  "slug": "separate-squares-ii",
+  "difficulty": "Hard",
+  "date": "2026-01-14",
+  "url": "https://leetcode.com/problems/separate-squares-ii/description/?envType=daily-question&envId=2026-01-14",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Segment Tree",
+    "Sweep Line"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
