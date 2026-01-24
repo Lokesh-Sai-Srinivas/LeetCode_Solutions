@@ -1,4 +1,4 @@
-**Total Solved:** 62
+**Total Solved:** 63
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -51,6 +51,7 @@
 | 3021 | [🔗](https://leetcode.com/problems/alice-and-bob-playing-flower-game/) | ✅ | ✅ | ✅ |
 | 3025 | [🔗](https://leetcode.com/problems/find-the-number-of-ways-to-place-people-i/) | ✅ | ✅ | ✅ |
 | 3027 | [🔗](https://leetcode.com/problems/find-the-number-of-ways-to-place-people-ii/) | ✅ | ✅ | ✅ |
+| 3047 | [🔗](https://leetcode.com/problems/find-the-largest-area-of-square-inside-two-rectangles/description/?envType=daily-question&envId=2026-01-17) | ❌ | ✅ | ❌ |
 | 3195 | [🔗](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-i/) | ✅ | ✅ | ✅ |
 | 3197 | [🔗](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-ii/) | ✅ | ✅ | ✅ |
 | 3227 | [🔗](https://leetcode.com/problems/vowels-game-in-a-string/) | ✅ | ✅ | ✅ |
