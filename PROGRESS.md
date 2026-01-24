@@ -1,4 +1,4 @@
-**Total Solved:** 58
+**Total Solved:** 59
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -54,6 +54,7 @@
 | 3227 | [🔗](https://leetcode.com/problems/vowels-game-in-a-string/) | ✅ | ✅ | ✅ |
 | 3408 | [🔗](https://leetcode.com/problems/design-task-manager/) | ✅ | ✅ | ✅ |
 | 3446 | [🔗](https://leetcode.com/problems/sort-matrix-by-diagonals/) | ✅ | ✅ | ✅ |
+| 3453 | [🔗](https://leetcode.com/problems/separate-squares-i/description/?envType=daily-question&envId=2026-01-13) | ✅ | ✅ | ✅ |
 | 3459 | [🔗](https://leetcode.com/problems/length-of-longest-v-shaped-diagonal-segment/) | ✅ | ✅ | ✅ |
 | 3484 | [🔗](https://leetcode.com/problems/design-spreadsheet/) | ✅ | ✅ | ✅ |
 | 3495 | [🔗](https://leetcode.com/problems/minimum-operations-to-make-array-elements-zero/) | ✅ | ✅ | ✅ |

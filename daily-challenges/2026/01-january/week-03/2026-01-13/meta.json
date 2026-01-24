@@ -1,0 +1,17 @@
+{
+  "problem_id": 3453,
+  "title": "Separate Squares I",
+  "slug": "separate-squares-i",
+  "difficulty": "Medium",
+  "date": "2026-01-13",
+  "url": "https://leetcode.com/problems/separate-squares-i/description/?envType=daily-question&envId=2026-01-13",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
