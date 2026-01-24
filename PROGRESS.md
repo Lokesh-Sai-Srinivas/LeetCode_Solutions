@@ -1,4 +1,4 @@
-**Total Solved:** 56
+**Total Solved:** 57
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -6,6 +6,7 @@
 | 0036 | [🔗](https://leetcode.com/problems/valid-sudoku/) | ✅ | ✅ | ✅ |
 | 0037 | [🔗](https://leetcode.com/problems/sudoku-solver/) | ✅ | ✅ | ✅ |
 | 0066 | [🔗](https://leetcode.com/problems/plus-one/description/1872710729/?envType=daily-question&envId=2026-01-02) | ✅ | ✅ | ✅ |
+| 0085 | [🔗](https://leetcode.com/problems/maximal-rectangle/?envType=daily-question&envId=2026-01-11) | ❌ | ✅ | ✅ |
 | 0120 | [🔗](https://leetcode.com/problems/triangle/) | ✅ | ✅ | ✅ |
 | 0165 | [🔗](https://leetcode.com/problems/compare-version-numbers/) | ✅ | ✅ | ✅ |
 | 0166 | [🔗](https://leetcode.com/problems/fraction-to-recurring-decimal/) | ✅ | ✅ | ✅ |

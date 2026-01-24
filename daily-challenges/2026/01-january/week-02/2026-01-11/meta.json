@@ -1,0 +1,19 @@
+{
+  "problem_id": 85,
+  "title": "Maximal Rectangle",
+  "slug": "maximal-rectangle",
+  "difficulty": "Hard",
+  "date": "2026-01-11",
+  "url": "https://leetcode.com/problems/maximal-rectangle/?envType=daily-question&envId=2026-01-11",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Stack",
+    "Matrix",
+    "Monotonic Stack"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "python": "python.py"
+  }
+}
