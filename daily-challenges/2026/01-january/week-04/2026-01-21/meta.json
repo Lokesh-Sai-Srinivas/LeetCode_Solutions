@@ -1,0 +1,15 @@
+{
+  "problem_id": 3315,
+  "title": "Construct the Minimum Bitwise Array II",
+  "slug": "construct-the-minimum-bitwise-array-ii",
+  "difficulty": "Medium",
+  "date": "2026-01-21",
+  "url": "https://leetcode.com/problems/construct-the-minimum-bitwise-array-ii/description/?envType=daily-question&envId=2026-01-21",
+  "topics": [
+    "Array",
+    "Bit Manipulation"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
