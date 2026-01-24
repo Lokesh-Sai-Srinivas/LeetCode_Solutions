@@ -1,0 +1,20 @@
+{
+  "problem_id": 3507,
+  "title": "Minimum Pair Removal to Sort Array I",
+  "slug": "minimum-pair-removal-to-sort-array-i",
+  "difficulty": "Easy",
+  "date": "2026-01-22",
+  "url": "https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i/?envType=daily-question&envId=2026-01-22",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Linked List",
+    "Heap (Priority Queue)",
+    "Simulation",
+    "Doubly-Linked List",
+    "Ordered Set"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
