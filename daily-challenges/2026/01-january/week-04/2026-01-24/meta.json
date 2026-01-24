@@ -1,0 +1,17 @@
+{
+  "problem_id": 1877,
+  "title": "Minimize Maximum Pair Sum in Array",
+  "slug": "minimize-maximum-pair-sum-in-array",
+  "difficulty": "Medium",
+  "date": "2026-01-24",
+  "url": "https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/?envType=daily-question&envId=2026-01-24",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Greedy",
+    "Sorting"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
