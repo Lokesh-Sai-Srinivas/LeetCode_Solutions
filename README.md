@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 60
+**Total Solved:** 61
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -142,6 +142,7 @@ This keeps the Git history clean and meaningful.
 | 2348 | [🔗](https://leetcode.com/problems/number-of-zero-filled-subarrays/) | ✅ | ✅ | ✅ |
 | 2749 | [🔗](https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/) | ✅ | ✅ | ✅ |
 | 2785 | [🔗](https://leetcode.com/problems/sort-vowels-in-a-string/) | ✅ | ✅ | ✅ |
+| 2943 | [🔗](https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/?envType=daily-question&envId=2026-01-15) | ❌ | ✅ | ❌ |
 | 3000 | [🔗](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/) | ✅ | ✅ | ✅ |
 | 3005 | [🔗](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | ✅ | ✅ | ✅ |
 | 3021 | [🔗](https://leetcode.com/problems/alice-and-bob-playing-flower-game/) | ✅ | ✅ | ✅ |
