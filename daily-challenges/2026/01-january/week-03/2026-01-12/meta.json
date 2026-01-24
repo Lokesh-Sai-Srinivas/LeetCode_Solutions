@@ -1,0 +1,18 @@
+{
+  "problem_id": 1266,
+  "title": "Minimum Time Visiting All Points",
+  "slug": "minimum-time-visiting-all-points",
+  "difficulty": "Easy",
+  "date": "2026-01-12",
+  "url": "https://leetcode.com/problems/minimum-time-visiting-all-points/description/?envType=daily-question&envId=2026-01-12",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
