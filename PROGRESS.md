@@ -1,4 +1,4 @@
-**Total Solved:** 64
+**Total Solved:** 65
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -23,6 +23,7 @@
 | 1161 | [🔗](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/?envType=daily-question&envId=2026-01-06) | ✅ | ✅ | ✅ |
 | 1266 | [🔗](https://leetcode.com/problems/minimum-time-visiting-all-points/description/?envType=daily-question&envId=2026-01-12) | ✅ | ✅ | ✅ |
 | 1277 | [🔗](https://leetcode.com/problems/count-square-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
+| 1292 | [🔗](https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/description/?envType=daily-question&envId=2026-01-12) | ❌ | ✅ | ❌ |
 | 1304 | [🔗](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/) | ✅ | ✅ | ✅ |
 | 1317 | [🔗](https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers/) | ✅ | ✅ | ✅ |
 | 1323 | [🔗](https://leetcode.com/problems/maximum-69-number/) | ✅ | ✅ | ✅ |
