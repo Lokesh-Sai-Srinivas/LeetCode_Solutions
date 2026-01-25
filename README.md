@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **24 days**
+- 🔥 Current streak: **25 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 70
+**Total Solved:** 71
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -138,6 +138,7 @@ This keeps the Git history clean and meaningful.
 | 1912 | [🔗](https://leetcode.com/problems/design-movie-rental-system/) | ✅ | ✅ | ✅ |
 | 1935 | [🔗](https://leetcode.com/problems/maximum-number-of-words-you-can-type/) | ✅ | ✅ | ✅ |
 | 1975 | [🔗](https://leetcode.com/problems/maximum-matrix-sum/description/?envType=daily-question&envId=2026-01-05) | ✅ | ✅ | ✅ |
+| 1984 | [🔗](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/?envType=daily-question&envId=2026-01-25) | ✅ | ✅ | ✅ |
 | 2197 | [🔗](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) | ✅ | ✅ | ✅ |
 | 2264 | [🔗](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | ✅ | ✅ | ✅ |
 | 2327 | [🔗](https://leetcode.com/problems/number-of-people-aware-of-a-secret/) | ✅ | ✅ | ✅ |

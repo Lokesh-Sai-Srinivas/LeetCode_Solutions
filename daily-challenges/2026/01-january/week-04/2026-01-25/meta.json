@@ -1,0 +1,18 @@
+{
+  "problem_id": 1984,
+  "title": "Minimum Difference Between Highest and Lowest of K Scores",
+  "slug": "minimum-difference-between-highest-and-lowest-of-k-scores",
+  "difficulty": "Easy",
+  "date": "2026-01-25",
+  "url": "https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/?envType=daily-question&envId=2026-01-25",
+  "topics": [
+    "Array",
+    "Sliding Window",
+    "Sorting"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
