@@ -1,0 +1,17 @@
+{
+  "problem_id": 1200,
+  "title": "Minimum Absolute Difference",
+  "slug": "minimum-absolute-difference",
+  "difficulty": "Easy",
+  "date": "2026-01-26",
+  "url": "https://leetcode.com/problems/minimum-absolute-difference/description/?envType=daily-question&envId=2026-01-26",
+  "topics": [
+    "Array",
+    "Sorting"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}

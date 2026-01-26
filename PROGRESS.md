@@ -1,4 +1,4 @@
-**Total Solved:** 71
+**Total Solved:** 72
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -21,6 +21,7 @@
 | 0966 | [🔗](https://leetcode.com/problems/vowel-spellchecker/) | ✅ | ✅ | ✅ |
 | 1039 | [🔗](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/) | ✅ | ✅ | ✅ |
 | 1161 | [🔗](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/?envType=daily-question&envId=2026-01-06) | ✅ | ✅ | ✅ |
+| 1200 | [🔗](https://leetcode.com/problems/minimum-absolute-difference/description/?envType=daily-question&envId=2026-01-26) | ✅ | ✅ | ✅ |
 | 1266 | [🔗](https://leetcode.com/problems/minimum-time-visiting-all-points/description/?envType=daily-question&envId=2026-01-12) | ✅ | ✅ | ✅ |
 | 1277 | [🔗](https://leetcode.com/problems/count-square-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
 | 1292 | [🔗](https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/description/?envType=daily-question&envId=2026-01-12) | ❌ | ✅ | ❌ |
