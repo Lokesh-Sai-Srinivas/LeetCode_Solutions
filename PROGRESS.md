@@ -1,4 +1,4 @@
-**Total Solved:** 72
+**Total Solved:** 73
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -74,3 +74,4 @@
 | 3510 | [🔗](https://leetcode.com/problems/minimum-pair-removal-to-sort-array-ii/?envType=daily-question&envId=2026-01-23) | ❌ | ✅ | ❌ |
 | 3516 | [🔗](https://leetcode.com/problems/find-closest-person/) | ✅ | ✅ | ✅ |
 | 3541 | [🔗](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/) | ✅ | ✅ | ✅ |
+| 3650 | [🔗](https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/?envType=daily-question&envId=2026-01-27) | ❌ | ✅ | ❌ |

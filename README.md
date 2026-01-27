@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **26 days**
+- 🔥 Current streak: **27 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 72
+**Total Solved:** 73
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -172,6 +172,7 @@ This keeps the Git history clean and meaningful.
 | 3510 | [🔗](https://leetcode.com/problems/minimum-pair-removal-to-sort-array-ii/?envType=daily-question&envId=2026-01-23) | ❌ | ✅ | ❌ |
 | 3516 | [🔗](https://leetcode.com/problems/find-closest-person/) | ✅ | ✅ | ✅ |
 | 3541 | [🔗](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/) | ✅ | ✅ | ✅ |
+| 3650 | [🔗](https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/?envType=daily-question&envId=2026-01-27) | ❌ | ✅ | ❌ |
 
 <!-- PROGRESS:END -->
 <!-- PROGRESS_TABLE:END -->
