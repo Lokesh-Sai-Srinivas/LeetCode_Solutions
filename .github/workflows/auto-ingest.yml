@@ -11,15 +11,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Fetch main
-        run: git fetch origin main
-        
-      - name: Merge main
-        run: git merge origin/main
-
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
+      - name: Checkout repository 
+        uses: actions/checkout@v4 
+        with: 
+          fetch-depth: 0 
+          persist-credentials: true 
+      - name: Configure git 
+        run: | 
+          git config user.name "leetcode-bot" 
+          git config user.email "leetcode-bot@users.noreply.github.com" 
+      - name: Ensure main exists and fetch remote 
+        run: | 
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} 
+          git fetch origin main --prune 
+      
+      - name: Rebase on remote main 
+        run: | 
+          # Try a rebase to keep history linear; fall back to merge if rebase fails 
+          set -e 
+          git checkout -B main origin/main || git checkout -B main 
+          if git rev-parse --verify origin/main >/dev/null 2>&1; then 
+            if ! git rebase origin/main; then 
+              echo "Rebase failed, aborting and falling back to merge" 
+              git rebase --abort || true 
+              git merge --no-edit origin/main 
+            fi 
+          fi
+          
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
