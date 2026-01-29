@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Fetch main
+        run: git fetch origin main
+        
+      - name: Merge main
+        run: git merge origin/main
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
