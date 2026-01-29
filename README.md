@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **27 days**
+- 🔥 Current streak: **0 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
