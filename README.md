@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **28 days**
+- 🔥 Current streak: **29 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 74
+**Total Solved:** 75
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -149,6 +149,7 @@ This keeps the Git history clean and meaningful.
 | 2785 | [🔗](https://leetcode.com/problems/sort-vowels-in-a-string/) | ✅ | ✅ | ✅ |
 | 2943 | [🔗](https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/?envType=daily-question&envId=2026-01-15) | ❌ | ✅ | ❌ |
 | 2975 | [🔗](https://leetcode.com/problems/maximum-square-area-by-removing-fences-from-a-field/description/?envType=daily-question&envId=2026-01-16) | ❌ | ✅ | ❌ |
+| 2976 | [🔗](https://leetcode.com/problems/minimum-cost-to-convert-string-i/?envType=daily-question&envId=2026-01-29) | ❌ | ✅ | ❌ |
 | 3000 | [🔗](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/) | ✅ | ✅ | ✅ |
 | 3005 | [🔗](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | ✅ | ✅ | ✅ |
 | 3021 | [🔗](https://leetcode.com/problems/alice-and-bob-playing-flower-game/) | ✅ | ✅ | ✅ |

@@ -1,0 +1,17 @@
+{
+  "problem_id": 2976,
+  "title": "Minimum Cost to Convert String I",
+  "slug": "minimum-cost-to-convert-string-i",
+  "difficulty": "Medium",
+  "date": "2026-01-29",
+  "url": "https://leetcode.com/problems/minimum-cost-to-convert-string-i/?envType=daily-question&envId=2026-01-29",
+  "topics": [
+    "Array",
+    "String",
+    "Graph Theory",
+    "Shortest Path"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
