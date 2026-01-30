@@ -1,4 +1,4 @@
-**Total Solved:** 75
+**Total Solved:** 76
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -52,6 +52,7 @@
 | 2943 | [🔗](https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/?envType=daily-question&envId=2026-01-15) | ❌ | ✅ | ❌ |
 | 2975 | [🔗](https://leetcode.com/problems/maximum-square-area-by-removing-fences-from-a-field/description/?envType=daily-question&envId=2026-01-16) | ❌ | ✅ | ❌ |
 | 2976 | [🔗](https://leetcode.com/problems/minimum-cost-to-convert-string-i/?envType=daily-question&envId=2026-01-29) | ❌ | ✅ | ❌ |
+| 2977 | [🔗](https://leetcode.com/problems/minimum-cost-to-convert-string-ii/?envType=daily-question&envId=2026-01-30) | ❌ | ✅ | ❌ |
 | 3000 | [🔗](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/) | ✅ | ✅ | ✅ |
 | 3005 | [🔗](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | ✅ | ✅ | ✅ |
 | 3021 | [🔗](https://leetcode.com/problems/alice-and-bob-playing-flower-game/) | ✅ | ✅ | ✅ |

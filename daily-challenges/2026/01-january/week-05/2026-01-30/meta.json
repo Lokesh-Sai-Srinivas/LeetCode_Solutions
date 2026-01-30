@@ -1,0 +1,19 @@
+{
+  "problem_id": 2977,
+  "title": "Minimum Cost to Convert String II",
+  "slug": "minimum-cost-to-convert-string-ii",
+  "difficulty": "Hard",
+  "date": "2026-01-30",
+  "url": "https://leetcode.com/problems/minimum-cost-to-convert-string-ii/?envType=daily-question&envId=2026-01-30",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Graph Theory",
+    "Trie",
+    "Shortest Path"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
