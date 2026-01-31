@@ -1,0 +1,17 @@
+{
+  "problem_id": 744,
+  "title": "Find Smallest Letter Greater Than Target",
+  "slug": "find-smallest-letter-greater-than-target",
+  "difficulty": "Easy",
+  "date": "2026-01-31",
+  "url": "https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/?envType=daily-question&envId=2026-01-31",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}

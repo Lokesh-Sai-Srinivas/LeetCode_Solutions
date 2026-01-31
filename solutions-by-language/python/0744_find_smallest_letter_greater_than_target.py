@@ -11,4 +11,3 @@ class Solution:
                 right = mid
 
         return letters[left % len(letters)]
-      
