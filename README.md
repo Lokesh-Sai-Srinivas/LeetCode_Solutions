@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **31 days**
+- 🔥 Current streak: **32 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 77
+**Total Solved:** 78
 
 | Problem | Link | cpp | java | python |
 |---------|------|:---:|:---:|:---:|
@@ -154,6 +154,7 @@ This keeps the Git history clean and meaningful.
 | 2977 | [🔗](https://leetcode.com/problems/minimum-cost-to-convert-string-ii/?envType=daily-question&envId=2026-01-30) | ❌ | ✅ | ❌ |
 | 3000 | [🔗](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/) | ✅ | ✅ | ✅ |
 | 3005 | [🔗](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | ✅ | ✅ | ✅ |
+| 3010 | [🔗](https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-i/description/?envType=daily-question&envId=2026-02-01) | ✅ | ✅ | ✅ |
 | 3021 | [🔗](https://leetcode.com/problems/alice-and-bob-playing-flower-game/) | ✅ | ✅ | ✅ |
 | 3025 | [🔗](https://leetcode.com/problems/find-the-number-of-ways-to-place-people-i/) | ✅ | ✅ | ✅ |
 | 3027 | [🔗](https://leetcode.com/problems/find-the-number-of-ways-to-place-people-ii/) | ✅ | ✅ | ✅ |

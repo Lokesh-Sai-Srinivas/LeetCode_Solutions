@@ -1,10 +1,11 @@
 class Solution {
-    public int minimumCost(int[] nums) {
+public:
+    int minimumCost(vector<int>& nums) {
         int first = nums[0];
-        int a = Integer.MAX_VALUE, b = Integer.MAX_VALUE;
+        int a = INT_MAX, b = INT_MAX;
 
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] < a) {
+        for(int i = 1; i < nums.size(); i ++) {
+            if(nums[i] < a) {
                 b = a;
                 a = nums[i];
             } else if (nums[i] < b) {
@@ -14,4 +15,4 @@ class Solution {
 
         return first + a + b;
     }
-}
+};

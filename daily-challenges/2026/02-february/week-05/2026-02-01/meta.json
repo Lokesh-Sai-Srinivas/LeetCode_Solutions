@@ -1,0 +1,18 @@
+{
+  "problem_id": 3010,
+  "title": "Divide an Array Into Subarrays With Minimum Cost I",
+  "slug": "divide-an-array-into-subarrays-with-minimum-cost-i",
+  "difficulty": "Easy",
+  "date": "2026-02-01",
+  "url": "https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-i/description/?envType=daily-question&envId=2026-02-01",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Enumeration"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
