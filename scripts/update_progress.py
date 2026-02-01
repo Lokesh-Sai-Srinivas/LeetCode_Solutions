@@ -11,6 +11,7 @@ README_FILE = ROOT / "README.md"
 PROGRESS_FILE = ROOT / "PROGRESS.md"
 DAILY_FOLDER = ROOT / "daily-challenges"
 LANG_ROOT = ROOT / "solutions-by-language"
+NAMES_FILE = ROOT / "problem_names.json"
 
 # ---------- CONFIG ----------
 EXT_TO_LANG = {
@@ -28,6 +29,9 @@ EXT_TO_LANG = {
     ".scala": "scala",
     ".php": "php",
 }
+
+# ---------- GLOBAL CACHE ----------
+PROBLEM_NAMES = {}
 
 # ---------- HELPERS ----------
 def get_problem_urls():
@@ -51,9 +55,29 @@ def get_problem_urls():
     return urls
 
 
+def load_problem_names():
+    if NAMES_FILE.exists():
+        try:
+            return json.loads(NAMES_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def save_problem_names():
+    if PROBLEM_NAMES:
+        NAMES_FILE.write_text(
+            json.dumps(PROBLEM_NAMES, indent=2),
+            encoding="utf-8"
+        )
+
+
 # ---------- SYNC DAILY SOLUTIONS ----------
 def sync_daily_challenges():
     """Copy daily solutions into solutions-by-language folders"""
+    global PROBLEM_NAMES
+    PROBLEM_NAMES.update(load_problem_names())
+
     if not DAILY_FOLDER.exists():
         return
 
@@ -80,10 +104,16 @@ def sync_daily_challenges():
                 continue
 
             pid = match.group(1).zfill(4)
-            name = match.group(2).lower().replace(" ", "_").replace("-", "_")
+            raw_name = match.group(2).strip()
+            safe_name = raw_name.lower().replace(" ", "_").replace("-", "_")
 
-            dest = dest_dir / f"{pid}_{name}{ext}"
+            # Store readable name
+            PROBLEM_NAMES[pid] = raw_name
+
+            dest = dest_dir / f"{pid}_{safe_name}{ext}"
             shutil.copy(file, dest)
+
+    save_problem_names()
 
 
 # ---------- COLLECT SOLVED ----------
@@ -110,18 +140,20 @@ def get_solved():
 def update_progress():
     solved = get_solved()
     problem_urls = get_problem_urls()
+    problem_names = load_problem_names()
 
     active_langs = sorted({lang for langs in solved.values() for lang in langs})
 
-    header = "| Problem | Link | " + " | ".join(active_langs) + " |\n"
-    header += "|---------|------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
+    header = "| ID | Problem Name | Link | " + " | ".join(active_langs) + " |\n"
+    header += "|----|--------------|------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
 
     rows = []
     for pid in sorted(solved):
+        name = problem_names.get(pid, "—")
         url = problem_urls.get(pid, "")
         link = f"[🔗]({url})" if url else ""
 
-        row = f"| {pid} | {link} "
+        row = f"| {pid} | {name} | {link} "
         for lang in active_langs:
             row += "| ✅ " if lang in solved[pid] else "| ❌ "
         row += "|"
