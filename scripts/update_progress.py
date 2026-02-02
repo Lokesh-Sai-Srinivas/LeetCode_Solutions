@@ -1,4 +1,3 @@
-import os
 import re
 import json
 import shutil
@@ -34,8 +33,17 @@ EXT_TO_LANG = {
 PROBLEM_NAMES = {}
 
 # ---------- HELPERS ----------
+def infer_name_from_filename(filename: str) -> str:
+    """
+    0001_two_sum.py -> Two Sum
+    """
+    name = filename.split("_", 1)[-1]
+    name = name.rsplit(".", 1)[0]
+    return name.replace("_", " ").title()
+
+
 def get_problem_urls():
-    """Map problem_id -> LeetCode URL from meta.json files"""
+    """Map problem_id -> LeetCode URL from daily meta.json files"""
     urls = {}
 
     if not DAILY_FOLDER.exists():
@@ -74,7 +82,10 @@ def save_problem_names():
 
 # ---------- SYNC DAILY SOLUTIONS ----------
 def sync_daily_challenges():
-    """Copy daily solutions into solutions-by-language folders"""
+    """
+    Copies daily solutions into language folders
+    AND captures problem names if present in solution headers
+    """
     global PROBLEM_NAMES
     PROBLEM_NAMES.update(load_problem_names())
 
@@ -119,9 +130,10 @@ def sync_daily_challenges():
 # ---------- COLLECT SOLVED ----------
 def get_solved():
     solved = defaultdict(set)
+    inferred_names = {}
 
     if not LANG_ROOT.exists():
-        return solved
+        return solved, inferred_names
 
     for lang_dir in LANG_ROOT.iterdir():
         if not lang_dir.is_dir():
@@ -131,16 +143,22 @@ def get_solved():
         for f in lang_dir.iterdir():
             m = re.match(r"^(\d+)", f.name)
             if m:
-                solved[m.group(1).zfill(4)].add(lang)
+                pid = m.group(1).zfill(4)
+                solved[pid].add(lang)
 
-    return solved
+                if pid not in inferred_names:
+                    inferred_names[pid] = infer_name_from_filename(f.name)
+
+    return solved, inferred_names
 
 
 # ---------- UPDATE PROGRESS ----------
 def update_progress():
-    solved = get_solved()
+    solved, inferred_names = get_solved()
     problem_urls = get_problem_urls()
+
     problem_names = load_problem_names()
+    problem_names.update(inferred_names)  # backfill missing names
 
     active_langs = sorted({lang for langs in solved.values() for lang in langs})
 
@@ -149,7 +167,7 @@ def update_progress():
 
     rows = []
     for pid in sorted(solved):
-        name = problem_names.get(pid, "—")
+        name = problem_names.get(pid, "Unknown")
         url = problem_urls.get(pid, "")
         link = f"[🔗]({url})" if url else ""
 
@@ -179,6 +197,11 @@ def update_progress():
         readme += f"\n\n## 📊 Progress\n{start}\n\n{content}\n\n{end}\n"
 
     README_FILE.write_text(readme, encoding="utf-8")
+
+    # Persist merged names
+    global PROBLEM_NAMES
+    PROBLEM_NAMES.update(problem_names)
+    save_problem_names()
 
 
 # ---------- RUN ----------
