@@ -1,0 +1,16 @@
+{
+  "problem_id": 3637,
+  "title": "Trionic Array I",
+  "slug": "trionic-array-i",
+  "difficulty": "Easy",
+  "date": "2026-02-03",
+  "url": "https://leetcode.com/problems/trionic-array-i/description/?envType=daily-question&envId=2026-02-03",
+  "topics": [
+    "Array"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
