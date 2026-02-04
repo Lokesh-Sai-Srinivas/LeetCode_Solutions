@@ -1,0 +1,15 @@
+{
+  "problem_id": 3640,
+  "title": "Trionic Array II",
+  "slug": "trionic-array-ii",
+  "difficulty": "Hard",
+  "date": "2026-02-04",
+  "url": "https://leetcode.com/problems/trionic-array-ii/description/?envType=daily-question&envId=2026-02-04",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
