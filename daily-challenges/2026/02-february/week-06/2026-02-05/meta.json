@@ -1,0 +1,17 @@
+{
+  "problem_id": 3379,
+  "title": "Transformed Array",
+  "slug": "transformed-array",
+  "difficulty": "Easy",
+  "date": "2026-02-05",
+  "url": "https://leetcode.com/problems/transformed-array/description/?envType=daily-question&envId=2026-02-05",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}

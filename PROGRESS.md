@@ -1,4 +1,4 @@
-**Total Solved:** 81
+**Total Solved:** 82
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -67,6 +67,7 @@
 | 3227 | Vowels Game In A String | [🔗](https://leetcode.com/problems/vowels-game-in-a-string/) | ✅ | ✅ | ✅ |
 | 3314 | Construct The Minimum Bitwise Array I | [🔗](https://leetcode.com/problems/construct-the-minimum-bitwise-array-i/?envType=daily-question&envId=2026-01-20) | ❌ | ✅ | ❌ |
 | 3315 | Construct The Minimum Bitwise Array Ii | [🔗](https://leetcode.com/problems/construct-the-minimum-bitwise-array-ii/description/?envType=daily-question&envId=2026-01-21) | ❌ | ✅ | ❌ |
+| 3379 | Transformed Array | [🔗](https://leetcode.com/problems/transformed-array/description/?envType=daily-question&envId=2026-02-05) | ✅ | ✅ | ✅ |
 | 3408 | Design Task Manager | [🔗](https://leetcode.com/problems/design-task-manager/) | ✅ | ✅ | ✅ |
 | 3446 | Sort Matrix By Diagonals | [🔗](https://leetcode.com/problems/sort-matrix-by-diagonals/) | ✅ | ✅ | ✅ |
 | 3453 | Separate Squares I | [🔗](https://leetcode.com/problems/separate-squares-i/description/?envType=daily-question&envId=2026-01-13) | ✅ | ✅ | ✅ |
