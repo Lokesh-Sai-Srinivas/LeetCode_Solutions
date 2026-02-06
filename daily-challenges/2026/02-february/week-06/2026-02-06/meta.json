@@ -1,0 +1,18 @@
+{
+  "problem_id": 3634,
+  "title": "Minimum Removals to Balance Array",
+  "slug": "minimum-removals-to-balance-array",
+  "difficulty": "Medium",
+  "date": "2026-02-06",
+  "url": "https://leetcode.com/problems/minimum-removals-to-balance-array/description/?envType=daily-question&envId=2026-02-06",
+  "topics": [
+    "Array",
+    "Sliding Window",
+    "Sorting"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}

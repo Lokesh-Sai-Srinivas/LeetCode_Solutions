@@ -1,4 +1,4 @@
-**Total Solved:** 82
+**Total Solved:** 83
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -80,6 +80,7 @@
 | 3510 | Minimum Pair Removal To Sort Array Ii | [🔗](https://leetcode.com/problems/minimum-pair-removal-to-sort-array-ii/?envType=daily-question&envId=2026-01-23) | ❌ | ✅ | ❌ |
 | 3516 | Find Closest Person | [🔗](https://leetcode.com/problems/find-closest-person/) | ✅ | ✅ | ✅ |
 | 3541 | Find Most Frequent Vowel And Consonant | [🔗](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/) | ✅ | ✅ | ✅ |
+| 3634 | Minimum Removals To Balance Array | [🔗](https://leetcode.com/problems/minimum-removals-to-balance-array/description/?envType=daily-question&envId=2026-02-06) | ✅ | ✅ | ✅ |
 | 3637 | Trionic Array I | [🔗](https://leetcode.com/problems/trionic-array-i/description/?envType=daily-question&envId=2026-02-03) | ✅ | ✅ | ✅ |
 | 3640 | Trionic Array Ii | [🔗](https://leetcode.com/problems/trionic-array-ii/description/?envType=daily-question&envId=2026-02-04) | ❌ | ✅ | ❌ |
 | 3650 | Minimum Cost Path With Edge Reversals | [🔗](https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/?envType=daily-question&envId=2026-01-27) | ❌ | ✅ | ❌ |
