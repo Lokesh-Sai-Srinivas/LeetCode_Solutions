@@ -1,4 +1,4 @@
-**Total Solved:** 83
+**Total Solved:** 84
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -35,6 +35,7 @@
 | 1458 | Max Dot Product Of Two Subsequences | [🔗](https://leetcode.com/problems/max-dot-product-of-two-subsequences/description/?envType=daily-question&envId=2026-01-08) | ✅ | ✅ | ✅ |
 | 1493 | Longest Subarray Of 1'S After Deleting One Element | [🔗](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | ✅ | ✅ | ✅ |
 | 1504 | Count Submatrices With All Ones | [🔗](https://leetcode.com/problems/count-submatrices-with-all-ones/) | ✅ | ✅ | ✅ |
+| 1653 | Minimum Deletions To Make String Balanced | [🔗](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/description/?envType=daily-question&envId=2026-02-07) | ✅ | ✅ | ✅ |
 | 1733 | Minimum Number Of People To Teach | [🔗](https://leetcode.com/problems/minimum-number-of-people-to-teach/) | ✅ | ✅ | ✅ |
 | 1792 | Maximum Average Pass Ratio | [🔗](https://leetcode.com/problems/maximum-average-pass-ratio/) | ✅ | ✅ | ✅ |
 | 1877 | Minimize Maximum Pair Sum In Array | [🔗](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/?envType=daily-question&envId=2026-01-24) | ✅ | ✅ | ✅ |
