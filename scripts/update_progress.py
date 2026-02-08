@@ -29,21 +29,19 @@ EXT_TO_LANG = {
     ".php": "php",
 }
 
+GITHUB_REPO_URL = "https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main"
+
 # ---------- GLOBAL CACHE ----------
 PROBLEM_NAMES = {}
 
 # ---------- HELPERS ----------
 def infer_name_from_filename(filename: str) -> str:
-    """
-    0001_two_sum.py -> Two Sum
-    """
     name = filename.split("_", 1)[-1]
     name = name.rsplit(".", 1)[0]
     return name.replace("_", " ").title()
 
 
 def get_problem_urls():
-    """Map problem_id -> LeetCode URL from daily meta.json files"""
     urls = {}
 
     if not DAILY_FOLDER.exists():
@@ -54,7 +52,6 @@ def get_problem_urls():
             data = json.loads(meta.read_text(encoding="utf-8"))
             pid = data.get("problem_id")
             url = data.get("url")
-
             if pid and url:
                 urls[str(pid).zfill(4)] = url
         except Exception:
@@ -82,10 +79,6 @@ def save_problem_names():
 
 # ---------- SYNC DAILY SOLUTIONS ----------
 def sync_daily_challenges():
-    """
-    Copies daily solutions into language folders
-    AND captures problem names if present in solution headers
-    """
     global PROBLEM_NAMES
     PROBLEM_NAMES.update(load_problem_names())
 
@@ -118,18 +111,16 @@ def sync_daily_challenges():
             raw_name = match.group(2).strip()
             safe_name = raw_name.lower().replace(" ", "_").replace("-", "_")
 
-            # Store readable name
             PROBLEM_NAMES[pid] = raw_name
-
             dest = dest_dir / f"{pid}_{safe_name}{ext}"
             shutil.copy(file, dest)
 
     save_problem_names()
 
 
-# ---------- COLLECT SOLVED ----------
+# ---------- COLLECT SOLVED + LINKS ----------
 def get_solved():
-    solved = defaultdict(set)
+    solved = defaultdict(dict)
     inferred_names = {}
 
     if not LANG_ROOT.exists():
@@ -142,12 +133,17 @@ def get_solved():
         lang = lang_dir.name
         for f in lang_dir.iterdir():
             m = re.match(r"^(\d+)", f.name)
-            if m:
-                pid = m.group(1).zfill(4)
-                solved[pid].add(lang)
+            if not m:
+                continue
 
-                if pid not in inferred_names:
-                    inferred_names[pid] = infer_name_from_filename(f.name)
+            pid = m.group(1).zfill(4)
+            rel_path = f"solutions-by-language/{lang}/{f.name}"
+            github_link = f"{GITHUB_REPO_URL}/{rel_path}"
+
+            solved[pid][lang] = github_link
+
+            if pid not in inferred_names:
+                inferred_names[pid] = infer_name_from_filename(f.name)
 
     return solved, inferred_names
 
@@ -158,47 +154,63 @@ def update_progress():
     problem_urls = get_problem_urls()
 
     problem_names = load_problem_names()
-    problem_names.update(inferred_names)  # backfill missing names
+    problem_names.update(inferred_names)
 
-    active_langs = sorted({lang for langs in solved.values() for lang in langs})
+    active_langs = sorted(
+        {lang for langs in solved.values() for lang in langs}
+    )
 
-    header = "| ID | Problem Name | Link | " + " | ".join(active_langs) + " |\n"
-    header += "|----|--------------|------|" + "|".join([":---:"] * len(active_langs)) + "|\n"
+    header = (
+        "| ID | Problem Name | Link | "
+        + " | ".join(active_langs)
+        + " |\n"
+    )
+    header += (
+        "|----|--------------|------|"
+        + "|".join([":---:"] * len(active_langs))
+        + "|\n"
+    )
 
     rows = []
     for pid in sorted(solved):
         name = problem_names.get(pid, "Unknown")
-        url = problem_urls.get(pid, "")
-        link = f"[🔗]({url})" if url else ""
+        problem_link = f"[🔗]({problem_urls.get(pid, '')})" if pid in problem_urls else ""
 
-        row = f"| {pid} | {name} | {link} "
+        row = f"| {pid} | {name} | {problem_link} "
+
         for lang in active_langs:
-            row += "| ✅ " if lang in solved[pid] else "| ❌ "
+            if lang in solved[pid]:
+                row += f"| [✅]({solved[pid][lang]}) "
+            else:
+                row += "| ❌ "
+
         row += "|"
         rows.append(row)
 
     table = header + "\n".join(rows)
     content = f"**Total Solved:** {len(solved)}\n\n" + table
 
-    # Write PROGRESS.md
     PROGRESS_FILE.write_text(content, encoding="utf-8")
 
-    # Update README
     readme = README_FILE.read_text(encoding="utf-8")
-
     start = "<!-- PROGRESS:START -->"
     end = "<!-- PROGRESS:END -->"
 
     if start in readme and end in readme:
-        before = readme.split(start)[0]
-        after = readme.split(end)[1]
-        readme = before + start + "\n\n" + content + "\n\n" + end + after
+        readme = (
+            readme.split(start)[0]
+            + start
+            + "\n\n"
+            + content
+            + "\n\n"
+            + end
+            + readme.split(end)[1]
+        )
     else:
         readme += f"\n\n## 📊 Progress\n{start}\n\n{content}\n\n{end}\n"
 
     README_FILE.write_text(readme, encoding="utf-8")
 
-    # Persist merged names
     global PROBLEM_NAMES
     PROBLEM_NAMES.update(problem_names)
     save_problem_names()
