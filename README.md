@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **38 days**
+- 🔥 Current streak: **39 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 84
+**Total Solved:** 85
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -105,6 +105,7 @@ This keeps the Git history clean and meaningful.
 | 0037 | Sudoku Solver | [🔗](https://leetcode.com/problems/sudoku-solver/) | ✅ | ✅ | ✅ |
 | 0066 | Plus One | [🔗](https://leetcode.com/problems/plus-one/description/1872710729/?envType=daily-question&envId=2026-01-02) | ✅ | ✅ | ✅ |
 | 0085 | Maximal Rectangle | [🔗](https://leetcode.com/problems/maximal-rectangle/?envType=daily-question&envId=2026-01-11) | ❌ | ✅ | ✅ |
+| 0110 | Balanced Binary Tree | [🔗](https://leetcode.com/problems/balanced-binary-tree/description/?envType=daily-question&envId=2026-02-08) | ✅ | ✅ | ✅ |
 | 0120 | Triangle | [🔗](https://leetcode.com/problems/triangle/) | ✅ | ✅ | ✅ |
 | 0165 | Compare Version Numbers | [🔗](https://leetcode.com/problems/compare-version-numbers/) | ✅ | ✅ | ✅ |
 | 0166 | Fraction To Recurring Decimal | [🔗](https://leetcode.com/problems/fraction-to-recurring-decimal/) | ✅ | ✅ | ✅ |

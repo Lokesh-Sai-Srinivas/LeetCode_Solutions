@@ -1,0 +1,18 @@
+{
+  "problem_id": 110,
+  "title": "Balanced Binary Tree",
+  "slug": "balanced-binary-tree",
+  "difficulty": "Easy",
+  "date": "2026-02-08",
+  "url": "https://leetcode.com/problems/balanced-binary-tree/description/?envType=daily-question&envId=2026-02-08",
+  "topics": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
