@@ -1,0 +1,21 @@
+{
+  "problem_id": 1382,
+  "title": "Balance a Binary Search Tree",
+  "slug": "balance-a-binary-search-tree",
+  "difficulty": "Medium",
+  "date": "2026-02-09",
+  "url": "https://leetcode.com/problems/balance-a-binary-search-tree/description/?envType=daily-question&envId=2026-02-09",
+  "topics": [
+    "Divide and Conquer",
+    "Greedy",
+    "Tree",
+    "Depth-First Search",
+    "Binary Search Tree",
+    "Binary Tree"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
