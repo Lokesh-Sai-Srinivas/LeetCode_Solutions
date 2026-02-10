@@ -1,0 +1,18 @@
+{
+  "problem_id": 3719,
+  "title": "Longest Balanced Subarray I",
+  "slug": "longest-balanced-subarray-i",
+  "difficulty": "Medium",
+  "date": "2026-02-10",
+  "url": "https://leetcode.com/problems/longest-balanced-subarray-i/description/?envType=daily-question&envId=2026-02-10",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Divide and Conquer",
+    "Segment Tree",
+    "Prefix Sum"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
