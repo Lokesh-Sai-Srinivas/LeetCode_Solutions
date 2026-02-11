@@ -85,7 +85,7 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **41 days**
+- 🔥 Current streak: **42 days**
 - 🏆 Longest streak: **45 days**
 
 <!-- STREAK:END -->
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 87
+**Total Solved:** 88
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -187,6 +187,7 @@ This keeps the Git history clean and meaningful.
 | 3650 | Minimum Cost Path With Edge Reversals | [🔗](https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/?envType=daily-question&envId=2026-01-27) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3650_minimum_cost_path_with_edge_reversals.java) | ❌ |
 | 3651 | Minimum Cost Path With Teleportations | [🔗](https://leetcode.com/problems/minimum-cost-path-with-teleportations/description/?envType=daily-question&envId=2026-01-28) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3651_minimum_cost_path_with_teleportations.java) | ❌ |
 | 3719 | Longest Balanced Subarray I | [🔗](https://leetcode.com/problems/longest-balanced-subarray-i/description/?envType=daily-question&envId=2026-02-10) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3719_longest_balanced_subarray_i.java) | ❌ |
+| 3721 | Longest Balanced Subarray Ii | [🔗](https://leetcode.com/problems/longest-balanced-subarray-ii/description/?envType=daily-question&envId=2026-02-11) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3721_longest_balanced_subarray_ii.java) | ❌ |
 
 <!-- PROGRESS:END -->
 <!-- PROGRESS_TABLE:END -->
