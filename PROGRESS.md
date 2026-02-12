@@ -1,4 +1,4 @@
-**Total Solved:** 88
+**Total Solved:** 89
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -88,5 +88,6 @@
 | 3640 | Trionic Array Ii | [🔗](https://leetcode.com/problems/trionic-array-ii/description/?envType=daily-question&envId=2026-02-04) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3640_trionic_array_ii.java) | ❌ |
 | 3650 | Minimum Cost Path With Edge Reversals | [🔗](https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/?envType=daily-question&envId=2026-01-27) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3650_minimum_cost_path_with_edge_reversals.java) | ❌ |
 | 3651 | Minimum Cost Path With Teleportations | [🔗](https://leetcode.com/problems/minimum-cost-path-with-teleportations/description/?envType=daily-question&envId=2026-01-28) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3651_minimum_cost_path_with_teleportations.java) | ❌ |
+| 3713 | Longest Balanced Substring I | [🔗](https://leetcode.com/problems/longest-balanced-substring-i/description/?envType=daily-question&envId=2026-02-12) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3713_longest_balanced_substring_i.java) | ❌ |
 | 3719 | Longest Balanced Subarray I | [🔗](https://leetcode.com/problems/longest-balanced-subarray-i/description/?envType=daily-question&envId=2026-02-10) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3719_longest_balanced_subarray_i.java) | ❌ |
 | 3721 | Longest Balanced Subarray Ii | [🔗](https://leetcode.com/problems/longest-balanced-subarray-ii/description/?envType=daily-question&envId=2026-02-11) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/3721_longest_balanced_subarray_ii.java) | ❌ |
