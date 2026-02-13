@@ -1,0 +1,16 @@
+{
+  "problem_id": 3714,
+  "title": "Longest Balanced Substring II",
+  "slug": "longest-balanced-substring-ii",
+  "difficulty": "Medium",
+  "date": "2026-02-13",
+  "url": "https://leetcode.com/problems/longest-balanced-substring-ii/?envType=daily-question&envId=2026-02-13",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Prefix Sum"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
