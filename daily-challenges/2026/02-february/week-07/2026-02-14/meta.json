@@ -1,0 +1,14 @@
+{
+  "problem_id": 799,
+  "title": "Champagne Tower",
+  "slug": "champagne-tower",
+  "difficulty": "Medium",
+  "date": "2026-02-14",
+  "url": "https://leetcode.com/problems/champagne-tower/description/?envType=daily-question&envId=2026-02-14",
+  "topics": [
+    "Dynamic Programming"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}
