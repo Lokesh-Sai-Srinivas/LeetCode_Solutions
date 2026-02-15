@@ -1,0 +1,18 @@
+{
+  "problem_id": 67,
+  "title": "Add Binary",
+  "slug": "add-binary",
+  "difficulty": "Easy",
+  "date": "2026-02-15",
+  "url": "https://leetcode.com/problems/add-binary/description/?envType=daily-question&envId=2026-02-15",
+  "topics": [
+    "Math",
+    "String",
+    "Bit Manipulation",
+    "Simulation"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  }
+}
