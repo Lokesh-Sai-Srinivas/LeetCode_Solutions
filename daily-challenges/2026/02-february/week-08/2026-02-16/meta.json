@@ -1,0 +1,17 @@
+{
+  "problem_id": 190,
+  "title": "Reverse Bits",
+  "slug": "reverse-bits",
+  "difficulty": "Easy",
+  "date": "2026-02-16",
+  "url": "https://leetcode.com/problems/reverse-bits/description/?envType=daily-question&envId=2026-02-16",
+  "topics": [
+    "Divide and Conquer",
+    "Bit Manipulation"
+  ],
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  }
+}
