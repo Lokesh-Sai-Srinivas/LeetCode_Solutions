@@ -85,8 +85,8 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **47 days**
-- 🏆 Longest streak: **47 days**
+- 🔥 Current streak: **48 days**
+- 🏆 Longest streak: **48 days**
 
 <!-- STREAK:END -->
 
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 93
+**Total Solved:** 94
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -112,6 +112,7 @@ This keeps the Git history clean and meaningful.
 | 0166 | Fraction To Recurring Decimal | [🔗](https://leetcode.com/problems/fraction-to-recurring-decimal/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0166_fraction_to_recurring_decimal.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0166_fraction_to_recurring_decimal.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0166_fraction_to_recurring_decimal.py) |
 | 0190 | Reverse Bits | [🔗](https://leetcode.com/problems/reverse-bits/description/?envType=daily-question&envId=2026-02-16) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0190_reverse_bits.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0190_reverse_bits.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0190_reverse_bits.py) |
 | 0342 | Power Of Four | [🔗](https://leetcode.com/problems/power-of-four/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0342_power_of_four.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0342_power_of_four.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0342_power_of_four.py) |
+| 0401 | Binary Watch | [🔗](https://leetcode.com/problems/binary-watch/description/?envType=daily-question&envId=2026-02-17) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0401_binary_watch.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0401_binary_watch.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0401_binary_watch.py) |
 | 0498 | Diagonal Traverse | [🔗](https://leetcode.com/problems/diagonal-traverse/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0498_diagonal_traverse.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0498_diagonal_traverse.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0498_diagonal_traverse.py) |
 | 0611 | Valid Triangle Number | [🔗](https://leetcode.com/problems/valid-triangle-number/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0611_valid_triangle_number.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0611_valid_triangle_number.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0611_valid_triangle_number.py) |
 | 0679 | 24 Game | [🔗](https://leetcode.com/problems/24-game/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0679_24_game.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0679_24_game.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0679_24_game.py) |

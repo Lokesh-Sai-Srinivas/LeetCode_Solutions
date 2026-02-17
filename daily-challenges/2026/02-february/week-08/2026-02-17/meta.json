@@ -1,0 +1,17 @@
+{
+  "problem_id": 401,
+  "title": "Binary Watch",
+  "slug": "binary-watch",
+  "difficulty": "Easy",
+  "date": "2026-02-17",
+  "url": "https://leetcode.com/problems/binary-watch/description/?envType=daily-question&envId=2026-02-17",
+  "topics": [
+    "Backtracking",
+    "Bit Manipulation"
+  ],
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  }
+}
