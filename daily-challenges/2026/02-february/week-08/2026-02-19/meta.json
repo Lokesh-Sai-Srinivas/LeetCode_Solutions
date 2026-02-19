@@ -1,0 +1,17 @@
+{
+  "problem_id": 696,
+  "title": "Count Binary Substrings",
+  "slug": "count-binary-substrings",
+  "difficulty": "Easy",
+  "date": "2026-02-19",
+  "url": "https://leetcode.com/problems/count-binary-substrings/description/?envType=daily-question&envId=2026-02-19",
+  "topics": [
+    "Two Pointers",
+    "String"
+  ],
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java",
+    "cpp": "cpp.cpp"
+  }
+}

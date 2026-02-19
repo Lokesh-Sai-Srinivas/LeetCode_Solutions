@@ -85,8 +85,8 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **49 days**
-- 🏆 Longest streak: **49 days**
+- 🔥 Current streak: **50 days**
+- 🏆 Longest streak: **50 days**
 
 <!-- STREAK:END -->
 
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 95
+**Total Solved:** 96
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -117,6 +117,7 @@ This keeps the Git history clean and meaningful.
 | 0611 | Valid Triangle Number | [🔗](https://leetcode.com/problems/valid-triangle-number/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0611_valid_triangle_number.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0611_valid_triangle_number.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0611_valid_triangle_number.py) |
 | 0679 | 24 Game | [🔗](https://leetcode.com/problems/24-game/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0679_24_game.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0679_24_game.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0679_24_game.py) |
 | 0693 | Binary Number With Alternating Bits | [🔗](https://leetcode.com/problems/binary-number-with-alternating-bits/description/?envType=daily-question&envId=2026-02-18) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0693_binary_number_with_alternating_bits.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0693_binary_number_with_alternating_bits.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0693_binary_number_with_alternating_bits.py) |
+| 0696 | Count Binary Substrings | [🔗](https://leetcode.com/problems/count-binary-substrings/description/?envType=daily-question&envId=2026-02-19) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0696_count_binary_substrings.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0696_count_binary_substrings.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0696_count_binary_substrings.py) |
 | 0712 | Minimum Ascii Delete Sum For Two Strings | [🔗](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/?envType=daily-question&envId=2026-01-10) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0712_minimum_ascii_delete_sum_for_two_strings.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0712_minimum_ascii_delete_sum_for_two_strings.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0712_minimum_ascii_delete_sum_for_two_strings.py) |
 | 0744 | Find Smallest Letter Greater Than Target | [🔗](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/?envType=daily-question&envId=2026-01-31) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0744_find_smallest_letter_greater_than_target.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0744_find_smallest_letter_greater_than_target.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0744_find_smallest_letter_greater_than_target.py) |
 | 0799 | Champagne Tower | [🔗](https://leetcode.com/problems/champagne-tower/description/?envType=daily-question&envId=2026-02-14) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0799_champagne_tower.java) | ❌ |
