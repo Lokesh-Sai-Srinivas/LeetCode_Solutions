@@ -94,5 +94,6 @@
   "0190": "Reverse Bits",
   "0401": "Binary Watch",
   "0693": "Binary Number With Alternating Bits",
-  "0696": "Count Binary Substrings"
+  "0696": "Count Binary Substrings",
+  "0761": "Special Binary String"
 }
