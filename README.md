@@ -85,8 +85,8 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **51 days**
-- 🏆 Longest streak: **51 days**
+- 🔥 Current streak: **52 days**
+- 🏆 Longest streak: **52 days**
 
 <!-- STREAK:END -->
 
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 97
+**Total Solved:** 98
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -121,6 +121,7 @@ This keeps the Git history clean and meaningful.
 | 0712 | Minimum Ascii Delete Sum For Two Strings | [🔗](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/?envType=daily-question&envId=2026-01-10) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0712_minimum_ascii_delete_sum_for_two_strings.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0712_minimum_ascii_delete_sum_for_two_strings.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0712_minimum_ascii_delete_sum_for_two_strings.py) |
 | 0744 | Find Smallest Letter Greater Than Target | [🔗](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/?envType=daily-question&envId=2026-01-31) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0744_find_smallest_letter_greater_than_target.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0744_find_smallest_letter_greater_than_target.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0744_find_smallest_letter_greater_than_target.py) |
 | 0761 | Special Binary String | [🔗](https://leetcode.com/problems/special-binary-string/?envType=daily-question&envId=2026-02-20) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0761_special_binary_string.java) | ❌ |
+| 0762 | Prime Number Of Set Bits In Binary Representation | [🔗](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/description/?envType=daily-question&envId=2026-02-21) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0762_prime_number_of_set_bits_in_binary_representation.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0762_prime_number_of_set_bits_in_binary_representation.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0762_prime_number_of_set_bits_in_binary_representation.py) |
 | 0799 | Champagne Tower | [🔗](https://leetcode.com/problems/champagne-tower/description/?envType=daily-question&envId=2026-02-14) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0799_champagne_tower.java) | ❌ |
 | 0837 | New 21 Game | [🔗](https://leetcode.com/problems/new-21-game/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0837_new_21_game.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0837_new_21_game.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0837_new_21_game.py) |
 | 0865 | Smallest Subtree With All The Deepest Nodes | [🔗](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/?envType=daily-question&envId=2026-01-09) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0865_smallest_subtree_with_all_the_deepest_nodes.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0865_smallest_subtree_with_all_the_deepest_nodes.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0865_smallest_subtree_with_all_the_deepest_nodes.py) |

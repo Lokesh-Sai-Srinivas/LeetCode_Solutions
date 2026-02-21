@@ -95,5 +95,6 @@
   "0401": "Binary Watch",
   "0693": "Binary Number With Alternating Bits",
   "0696": "Count Binary Substrings",
-  "0761": "Special Binary String"
+  "0761": "Special Binary String",
+  "0762": "Prime Number Of Set Bits In Binary Representation"
 }
