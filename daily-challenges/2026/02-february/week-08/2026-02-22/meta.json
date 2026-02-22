@@ -1,0 +1,14 @@
+{
+  "problem_id": 868,
+  "title": "Binary Gap",
+  "slug": "binary-gap",
+  "difficulty": "Easy",
+  "date": "2026-02-22",
+  "url": "https://leetcode.com/problems/binary-gap/description/?envType=daily-question&envId=2026-02-22",
+  "topics": [
+    "Bit Manipulation"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}

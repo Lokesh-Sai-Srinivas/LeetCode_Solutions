@@ -85,8 +85,8 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **52 days**
-- 🏆 Longest streak: **52 days**
+- 🔥 Current streak: **53 days**
+- 🏆 Longest streak: **53 days**
 
 <!-- STREAK:END -->
 
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 98
+**Total Solved:** 99
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -125,6 +125,7 @@ This keeps the Git history clean and meaningful.
 | 0799 | Champagne Tower | [🔗](https://leetcode.com/problems/champagne-tower/description/?envType=daily-question&envId=2026-02-14) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0799_champagne_tower.java) | ❌ |
 | 0837 | New 21 Game | [🔗](https://leetcode.com/problems/new-21-game/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0837_new_21_game.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0837_new_21_game.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0837_new_21_game.py) |
 | 0865 | Smallest Subtree With All The Deepest Nodes | [🔗](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/?envType=daily-question&envId=2026-01-09) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0865_smallest_subtree_with_all_the_deepest_nodes.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0865_smallest_subtree_with_all_the_deepest_nodes.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0865_smallest_subtree_with_all_the_deepest_nodes.py) |
+| 0868 | Binary Gap | [🔗](https://leetcode.com/problems/binary-gap/description/?envType=daily-question&envId=2026-02-22) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0868_binary_gap.java) | ❌ |
 | 0961 | N-Repeated Element In Size 2N Array | [🔗](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/description/?envType=daily-question&envId=2026-01-02) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0961_n_repeated_element_in_size_2n_array.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0961_n_repeated_element_in_size_2n_array.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0961_n_repeated_element_in_size_2n_array.py) |
 | 0966 | Vowel Spellchecker | [🔗](https://leetcode.com/problems/vowel-spellchecker/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/0966_vowel_spellchecker.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/0966_vowel_spellchecker.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/0966_vowel_spellchecker.py) |
 | 1039 | Minimum Score Triangulation Of Polygon | [🔗](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/1039_minimum_score_triangulation_of_polygon.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/1039_minimum_score_triangulation_of_polygon.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/1039_minimum_score_triangulation_of_polygon.py) |
