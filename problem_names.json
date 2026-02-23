@@ -97,5 +97,6 @@
   "0696": "Count Binary Substrings",
   "0761": "Special Binary String",
   "0762": "Prime Number Of Set Bits In Binary Representation",
-  "0868": "Binary Gap"
+  "0868": "Binary Gap",
+  "1461": "Check If A String Contains All Binary Codes Of Size K"
 }
