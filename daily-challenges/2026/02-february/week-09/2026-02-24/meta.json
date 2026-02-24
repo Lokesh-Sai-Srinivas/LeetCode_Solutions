@@ -1,0 +1,18 @@
+{
+  "problem_id": 1022,
+  "title": "Sum of Root To Leaf Binary Numbers",
+  "slug": "sum-of-root-to-leaf-binary-numbers",
+  "difficulty": "Easy",
+  "date": "2026-02-24",
+  "url": "https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/description/?envType=daily-question&envId=2026-02-24",
+  "topics": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ],
+  "solutions": {
+    "java": "java.java",
+    "cpp": "cpp.cpp",
+    "python": "python.py"
+  }
+}
