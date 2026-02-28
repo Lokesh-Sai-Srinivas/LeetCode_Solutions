@@ -85,8 +85,8 @@ This keeps the Git history clean and meaningful.
 <!-- STREAK:START -->
 
 🔥 **Daily Streak**
-- 🔥 Current streak: **58 days**
-- 🏆 Longest streak: **58 days**
+- 🔥 Current streak: **59 days**
+- 🏆 Longest streak: **59 days**
 
 <!-- STREAK:END -->
 
@@ -96,7 +96,7 @@ This keeps the Git history clean and meaningful.
 ## 📊 Progress
 <!-- PROGRESS:START -->
 
-**Total Solved:** 104
+**Total Solved:** 105
 
 | ID | Problem Name | Link | cpp | java | python |
 |----|--------------|------|:---:|:---:|:---:|
@@ -149,6 +149,7 @@ This keeps the Git history clean and meaningful.
 | 1493 | Longest Subarray Of 1'S After Deleting One Element | [🔗](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/1493_longest_subarray_of_1's_after_deleting_one_element.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/1493_longest_subarray_of_1's_after_deleting_one_element.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/1493_longest_subarray_of_1's_after_deleting_one_element.py) |
 | 1504 | Count Submatrices With All Ones | [🔗](https://leetcode.com/problems/count-submatrices-with-all-ones/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/1504_count_submatrices_with_all_ones.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/1504_count_submatrices_with_all_ones.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/1504_count_submatrices_with_all_ones.py) |
 | 1653 | Minimum Deletions To Make String Balanced | [🔗](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/description/?envType=daily-question&envId=2026-02-07) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/1653_minimum_deletions_to_make_string_balanced.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/1653_minimum_deletions_to_make_string_balanced.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/1653_minimum_deletions_to_make_string_balanced.py) |
+| 1680 | Concatenation Of Consecutive Binary Numbers | [🔗](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/?envType=daily-question&envId=2026-02-28) | ❌ | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/1680_concatenation_of_consecutive_binary_numbers.java) | ❌ |
 | 1733 | Minimum Number Of People To Teach | [🔗](https://leetcode.com/problems/minimum-number-of-people-to-teach/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/1733_minimum_number_of_people_to_teach.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/1733_minimum_number_of_people_to_teach.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/1733_minimum_number_of_people_to_teach.py) |
 | 1792 | Maximum Average Pass Ratio | [🔗](https://leetcode.com/problems/maximum-average-pass-ratio/) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/1792_maximum_average_pass_ratio.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/1792_maximum_average_pass_ratio.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/1792_maximum_average_pass_ratio.py) |
 | 1877 | Minimize Maximum Pair Sum In Array | [🔗](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/?envType=daily-question&envId=2026-01-24) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/cpp/1877_minimize_maximum_pair_sum_in_array.cpp) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/java/1877_minimize_maximum_pair_sum_in_array.java) | [✅](https://github.com/Lokesh-Sai-Srinivas/LeetCode_Solutions/blob/main/solutions-by-language/python/1877_minimize_maximum_pair_sum_in_array.py) |

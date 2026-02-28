@@ -1,0 +1,16 @@
+{
+  "problem_id": 1680,
+  "title": "Concatenation of Consecutive Binary Numbers",
+  "slug": "concatenation-of-consecutive-binary-numbers",
+  "difficulty": "Medium",
+  "date": "2026-02-28",
+  "url": "https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/?envType=daily-question&envId=2026-02-28",
+  "topics": [
+    "Math",
+    "Bit Manipulation",
+    "Simulation"
+  ],
+  "solutions": {
+    "java": "java.java"
+  }
+}

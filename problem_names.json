@@ -102,5 +102,6 @@
   "1022": "Sum Of Root To Leaf Binary Numbers",
   "1356": "Sort Integers By The Number Of 1 Bits",
   "1404": "Number Of Steps To Reduce A Number In Binary Representation To One",
-  "3666": "Minimum Operations To Equalize Binary String"
+  "3666": "Minimum Operations To Equalize Binary String",
+  "1680": "Concatenation Of Consecutive Binary Numbers"
 }
