@@ -1,0 +1,16 @@
+{
+  "problem_id": 1689,
+  "title": "Partitioning Into Minimum Number Of Deci-Binary Numbers",
+  "slug": "partitioning-into-minimum-number-of-deci-binary-numbers",
+  "difficulty": "Medium",
+  "date": "2026-03-01",
+  "url": "https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/description/?envType=daily-question&envId=2026-03-01",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "solutions": {
+    "python": "python.py",
+    "java": "java.java"
+  }
+}
